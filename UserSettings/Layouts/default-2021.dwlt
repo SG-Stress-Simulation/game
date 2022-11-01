@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 934
-  m_MinSize: {x: 503, y: 321}
-  m_MaxSize: {x: 16192, y: 12117}
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 62
+  controlID: 29
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,8 +221,8 @@ MonoBehaviour:
     y: 0
     width: 1466
     height: 934
-  m_MinSize: {x: 403, y: 321}
-  m_MaxSize: {x: 8096, y: 12117}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
   controlID: 20
 --- !u!114 &10
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 1466
     height: 554
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 21
 --- !u!114 &11
@@ -313,8 +313,8 @@ MonoBehaviour:
   currentStatusEntriesHasUpdate: 0
   repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 0
-  changeTab: 2
-  activeTab: 2
+  changeTab: 3
+  activeTab: 3
   initProjectView:
     hasCompletedInitialCheck: 1
     isUserDataPresent: 1
@@ -457,32 +457,17 @@ MonoBehaviour:
     commitBody: 
     commitMessage: 
     currentBranch: master
-    treeScroll: {x: 0, y: 230}
+    treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - 6ea315d0fd7389c41b19996891e99ae3
-        - 9fc0d4010bbf28b4594072e72b8655ab
-        - 00000000000000006000000000000000
-        - 00000000000000007100000000000000
-        - 00000000000000008000000000000000
+        - b1ff529512b58ff3ea72d91b414d5adc
+        - ebaa0383b71285bbd941269944f2ffe6
+        - a7da124f598593777868d32dc9715138
+        - 429de5dfb8bdd6f2d99749ab1e81e17d
         - 0000000000000000b000000000000000
-        - 0000000000000000c000000000000000
-        - 00000000000000006100000000000000
-        - 00000000000000002000000000000000
-        - 0000000000000000f100000000000000
-        - 00000000000000004100000000000000
-        - 00000000000000005100000000000000
-        - 0000000000000000b100000000000000
         - 00000000000000004000000000000000
-        - 0000000000000000e100000000000000
-        - 00000000000000009000000000000000
-        - 00000000000000003000000000000000
-        - 00000000000000007000000000000000
-        - 0000000000000000a100000000000000
-        - 0000000000000000d100000000000000
-        - 0000000000000000c100000000000000
         values:
         - path: Assets
           label: Assets
@@ -502,8 +487,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets/Scenes
-          label: Scenes
+        - path: Assets/XR
+          label: XR
           level: 1
           isFolder: 1
           isContainer: 0
@@ -520,8 +505,45 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets/Scenes/SampleScene.unity
-          label: SampleScene.unity
+        - path: Assets/XR/Settings
+          label: Settings
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets/XR/Settings/OpenXR Editor Settings.asset
+          label: OpenXR Editor Settings.asset
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets/XR/Settings/OpenXR Editor Settings.asset
+            fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Editor
+              Settings.asset
+            projectPath: Assets/XR/Settings/OpenXR Editor Settings.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets/XR/XRGeneralSettings.asset
+          label: XRGeneralSettings.asset
           level: 2
           isFolder: 0
           isContainer: 1
@@ -532,63 +554,9 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets/Scenes/SampleScene.unity
-            fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity
-            projectPath: Assets/Scenes/SampleScene.unity
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/AudioManager.asset
-          label: AudioManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/AudioManager.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/AudioManager.asset
-            projectPath: ProjectSettings/AudioManager.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/ClusterInputManager.asset
-          label: ClusterInputManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/ClusterInputManager.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ClusterInputManager.asset
-            projectPath: ProjectSettings/ClusterInputManager.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/DynamicsManager.asset
-          label: DynamicsManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/DynamicsManager.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/DynamicsManager.asset
-            projectPath: ProjectSettings/DynamicsManager.asset
+            path: Assets/XR/XRGeneralSettings.asset
+            fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/XRGeneralSettings.asset
+            projectPath: Assets/XR/XRGeneralSettings.asset
             originalPath: 
             indexStatus: 1
             workTreeStatus: 1
@@ -608,134 +576,8 @@ MonoBehaviour:
             fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorBuildSettings.asset
             projectPath: ProjectSettings/EditorBuildSettings.asset
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/EditorSettings.asset
-          label: EditorSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/EditorSettings.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorSettings.asset
-            projectPath: ProjectSettings/EditorSettings.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/GraphicsSettings.asset
-          label: GraphicsSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/GraphicsSettings.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/GraphicsSettings.asset
-            projectPath: ProjectSettings/GraphicsSettings.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/InputManager.asset
-          label: InputManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/InputManager.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/InputManager.asset
-            projectPath: ProjectSettings/InputManager.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/MemorySettings.asset
-          label: MemorySettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/MemorySettings.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/MemorySettings.asset
-            projectPath: ProjectSettings/MemorySettings.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/NavMeshAreas.asset
-          label: NavMeshAreas.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/NavMeshAreas.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/NavMeshAreas.asset
-            projectPath: ProjectSettings/NavMeshAreas.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/Physics2DSettings.asset
-          label: Physics2DSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/Physics2DSettings.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Physics2DSettings.asset
-            projectPath: ProjectSettings/Physics2DSettings.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/PresetManager.asset
-          label: PresetManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/PresetManager.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PresetManager.asset
-            projectPath: ProjectSettings/PresetManager.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 3
         - path: ProjectSettings/ProjectSettings.asset
           label: ProjectSettings.asset
           level: 1
@@ -752,164 +594,17 @@ MonoBehaviour:
             fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectSettings.asset
             projectPath: ProjectSettings/ProjectSettings.asset
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/ProjectVersion.txt
-          label: ProjectVersion.txt
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/ProjectVersion.txt
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectVersion.txt
-            projectPath: ProjectSettings/ProjectVersion.txt
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/QualitySettings.asset
-          label: QualitySettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/QualitySettings.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/QualitySettings.asset
-            projectPath: ProjectSettings/QualitySettings.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/TagManager.asset
-          label: TagManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/TagManager.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TagManager.asset
-            projectPath: ProjectSettings/TagManager.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/TimeManager.asset
-          label: TimeManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/TimeManager.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TimeManager.asset
-            projectPath: ProjectSettings/TimeManager.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/UnityConnectSettings.asset
-          label: UnityConnectSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/UnityConnectSettings.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/UnityConnectSettings.asset
-            projectPath: ProjectSettings/UnityConnectSettings.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/VersionControlSettings.asset
-          label: VersionControlSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/VersionControlSettings.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VersionControlSettings.asset
-            projectPath: ProjectSettings/VersionControlSettings.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings/VFXManager.asset
-          label: VFXManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings/VFXManager.asset
-            fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VFXManager.asset
-            projectPath: ProjectSettings/VFXManager.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 3
       folders:
         keys:
-        - .vscode
         - Assets
-        - Assets/Scenes
-        - Packages
+        - Assets/XR
+        - Assets/XR/Settings
         - ProjectSettings
-        - ProjectSettings/Packages
-        - ProjectSettings/Packages/com.unity.testtools.codecoverage
         - UserSettings
         - UserSettings/Layouts
         values:
-        - path: .vscode
-          label: .vscode
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
         - path: Assets
           label: Assets
           level: 0
@@ -928,8 +623,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets/Scenes
-          label: Scenes
+        - path: Assets/XR
+          label: XR
           level: 1
           isFolder: 1
           isContainer: 0
@@ -946,9 +641,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Packages
-          label: Packages
-          level: 0
+        - path: Assets/XR/Settings
+          label: Settings
+          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -967,42 +662,6 @@ MonoBehaviour:
         - path: ProjectSettings
           label: ProjectSettings
           level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: ProjectSettings/Packages
-          label: Packages
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: ProjectSettings/Packages/com.unity.testtools.codecoverage
-          label: com.unity.testtools.codecoverage
-          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1082,42 +741,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: .vscode
-        label: .vscode
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: .vscode/settings.json
-        label: settings.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: .vscode/settings.json
-          fullPath: /home/thilo/sg-ws2223-p01/.vscode/settings.json
-          projectPath: .vscode/settings.json
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: Assets
         label: Assets
         level: 0
@@ -1136,26 +759,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets/Scenes.meta
-        label: Scenes.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets/Scenes.meta
-          fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes.meta
-          projectPath: Assets/Scenes.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets/Scenes
-        label: Scenes
+      - path: Assets/XR
+        label: XR
         level: 1
         isFolder: 1
         isContainer: 0
@@ -1172,8 +777,62 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets/Scenes/SampleScene.unity
-        label: SampleScene.unity
+      - path: Assets/XR/Settings
+        label: Settings
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets/XR/Settings/OpenXR Editor Settings.asset
+        label: OpenXR Editor Settings.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets/XR/Settings/OpenXR Editor Settings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Editor Settings.asset
+          projectPath: Assets/XR/Settings/OpenXR Editor Settings.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets/XR/Settings/OpenXR Editor Settings.asset.meta
+        label: OpenXR Editor Settings.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets/XR/Settings/OpenXR Editor Settings.asset.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Editor Settings.asset.meta
+          projectPath: Assets/XR/Settings/OpenXR Editor Settings.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets/XR/XRGeneralSettings.asset
+        label: XRGeneralSettings.asset
         level: 2
         isFolder: 0
         isContainer: 1
@@ -1184,14 +843,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets/Scenes/SampleScene.unity
-          fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity
-          projectPath: Assets/Scenes/SampleScene.unity
+          path: Assets/XR/XRGeneralSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/XRGeneralSettings.asset
+          projectPath: Assets/XR/XRGeneralSettings.asset
           originalPath: 
           indexStatus: 1
           workTreeStatus: 1
-      - path: Assets/Scenes/SampleScene.unity.meta
-        label: SampleScene.unity.meta
+      - path: Assets/XR/XRGeneralSettings.asset.meta
+        label: XRGeneralSettings.asset.meta
         level: 3
         isFolder: 0
         isContainer: 0
@@ -1202,63 +861,9 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets/Scenes/SampleScene.unity.meta
-          fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity.meta
-          projectPath: Assets/Scenes/SampleScene.unity.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Packages
-        label: Packages
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Packages/manifest.json
-        label: manifest.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Packages/manifest.json
-          fullPath: /home/thilo/sg-ws2223-p01/Packages/manifest.json
-          projectPath: Packages/manifest.json
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Packages/packages-lock.json
-        label: packages-lock.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Packages/packages-lock.json
-          fullPath: /home/thilo/sg-ws2223-p01/Packages/packages-lock.json
-          projectPath: Packages/packages-lock.json
+          path: Assets/XR/XRGeneralSettings.asset.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/XRGeneralSettings.asset.meta
+          projectPath: Assets/XR/XRGeneralSettings.asset.meta
           originalPath: 
           indexStatus: 1
           workTreeStatus: 1
@@ -1280,78 +885,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: ProjectSettings/AudioManager.asset
-        label: AudioManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/AudioManager.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/AudioManager.asset
-          projectPath: ProjectSettings/AudioManager.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/boot.config
-        label: boot.config
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/boot.config
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/boot.config
-          projectPath: ProjectSettings/boot.config
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/ClusterInputManager.asset
-        label: ClusterInputManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/ClusterInputManager.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ClusterInputManager.asset
-          projectPath: ProjectSettings/ClusterInputManager.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/DynamicsManager.asset
-        label: DynamicsManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/DynamicsManager.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/DynamicsManager.asset
-          projectPath: ProjectSettings/DynamicsManager.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: ProjectSettings/EditorBuildSettings.asset
         label: EditorBuildSettings.asset
         level: 1
@@ -1368,206 +901,8 @@ MonoBehaviour:
           fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorBuildSettings.asset
           projectPath: ProjectSettings/EditorBuildSettings.asset
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/EditorSettings.asset
-        label: EditorSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/EditorSettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorSettings.asset
-          projectPath: ProjectSettings/EditorSettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/GraphicsSettings.asset
-        label: GraphicsSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/GraphicsSettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/GraphicsSettings.asset
-          projectPath: ProjectSettings/GraphicsSettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/InputManager.asset
-        label: InputManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/InputManager.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/InputManager.asset
-          projectPath: ProjectSettings/InputManager.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/MemorySettings.asset
-        label: MemorySettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/MemorySettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/MemorySettings.asset
-          projectPath: ProjectSettings/MemorySettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/NavMeshAreas.asset
-        label: NavMeshAreas.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/NavMeshAreas.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/NavMeshAreas.asset
-          projectPath: ProjectSettings/NavMeshAreas.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/PackageManagerSettings.asset
-        label: PackageManagerSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/PackageManagerSettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PackageManagerSettings.asset
-          projectPath: ProjectSettings/PackageManagerSettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/Packages
-        label: Packages
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
           indexStatus: 0
-          workTreeStatus: 0
-      - path: ProjectSettings/Packages/com.unity.testtools.codecoverage
-        label: com.unity.testtools.codecoverage
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
-        label: Settings.json
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
-          projectPath: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/Physics2DSettings.asset
-        label: Physics2DSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/Physics2DSettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Physics2DSettings.asset
-          projectPath: ProjectSettings/Physics2DSettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/PresetManager.asset
-        label: PresetManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/PresetManager.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PresetManager.asset
-          projectPath: ProjectSettings/PresetManager.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          workTreeStatus: 3
       - path: ProjectSettings/ProjectSettings.asset
         label: ProjectSettings.asset
         level: 1
@@ -1584,10 +919,10 @@ MonoBehaviour:
           fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectSettings.asset
           projectPath: ProjectSettings/ProjectSettings.asset
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/ProjectVersion.txt
-        label: ProjectVersion.txt
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: ProjectSettings/SceneTemplateSettings.json
+        label: SceneTemplateSettings.json
         level: 1
         isFolder: 0
         isContainer: 0
@@ -1598,14 +933,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: ProjectSettings/ProjectVersion.txt
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectVersion.txt
-          projectPath: ProjectSettings/ProjectVersion.txt
+          path: ProjectSettings/SceneTemplateSettings.json
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/SceneTemplateSettings.json
+          projectPath: ProjectSettings/SceneTemplateSettings.json
           originalPath: 
           indexStatus: 1
           workTreeStatus: 1
-      - path: ProjectSettings/QualitySettings.asset
-        label: QualitySettings.asset
+      - path: ProjectSettings/TimelineSettings.asset
+        label: TimelineSettings.asset
         level: 1
         isFolder: 0
         isContainer: 0
@@ -1616,117 +951,9 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: ProjectSettings/QualitySettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/QualitySettings.asset
-          projectPath: ProjectSettings/QualitySettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/TagManager.asset
-        label: TagManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/TagManager.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TagManager.asset
-          projectPath: ProjectSettings/TagManager.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/TimeManager.asset
-        label: TimeManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/TimeManager.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TimeManager.asset
-          projectPath: ProjectSettings/TimeManager.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/UnityConnectSettings.asset
-        label: UnityConnectSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/UnityConnectSettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/UnityConnectSettings.asset
-          projectPath: ProjectSettings/UnityConnectSettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/VersionControlSettings.asset
-        label: VersionControlSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/VersionControlSettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VersionControlSettings.asset
-          projectPath: ProjectSettings/VersionControlSettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/VFXManager.asset
-        label: VFXManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/VFXManager.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VFXManager.asset
-          projectPath: ProjectSettings/VFXManager.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings/XRSettings.asset
-        label: XRSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings/XRSettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/XRSettings.asset
-          projectPath: ProjectSettings/XRSettings.asset
+          path: ProjectSettings/TimelineSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TimelineSettings.asset
+          projectPath: ProjectSettings/TimelineSettings.asset
           originalPath: 
           indexStatus: 1
           workTreeStatus: 1
@@ -1748,24 +975,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings/EditorUserSettings.asset
-        label: EditorUserSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings/EditorUserSettings.asset
-          fullPath: /home/thilo/sg-ws2223-p01/UserSettings/EditorUserSettings.asset
-          projectPath: UserSettings/EditorUserSettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: UserSettings/Layouts
         label: Layouts
         level: 1
@@ -1800,10 +1009,11 @@ MonoBehaviour:
           fullPath: /home/thilo/sg-ws2223-p01/UserSettings/Layouts/default-2021.dwlt
           projectPath: UserSettings/Layouts/default-2021.dwlt
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: UserSettings/Search.settings
-        label: Search.settings
+          indexStatus: 0
+          workTreeStatus: 3
+      selectedNode:
+        path: ProjectSettings/ProjectSettings.asset
+        label: ProjectSettings.asset
         level: 1
         isFolder: 0
         isContainer: 0
@@ -1814,89 +1024,34 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: UserSettings/Search.settings
-          fullPath: /home/thilo/sg-ws2223-p01/UserSettings/Search.settings
-          projectPath: UserSettings/Search.settings
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      selectedNode:
-        path: 
-        label: 
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: ProjectSettings/ProjectSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectSettings.asset
+          projectPath: ProjectSettings/ProjectSettings.asset
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 0
+          workTreeStatus: 3
     gitStatusEntries:
-    - path: .vscode/settings.json
-      fullPath: /home/thilo/sg-ws2223-p01/.vscode/settings.json
-      projectPath: .vscode/settings.json
+    - path: Assets/XR/Settings/OpenXR Editor Settings.asset
+      fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Editor Settings.asset
+      projectPath: Assets/XR/Settings/OpenXR Editor Settings.asset
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
-    - path: Assets/Scenes.meta
-      fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes.meta
-      projectPath: Assets/Scenes.meta
+    - path: Assets/XR/Settings/OpenXR Editor Settings.asset.meta
+      fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Editor Settings.asset.meta
+      projectPath: Assets/XR/Settings/OpenXR Editor Settings.asset.meta
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
-    - path: Assets/Scenes/SampleScene.unity
-      fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity
-      projectPath: Assets/Scenes/SampleScene.unity
+    - path: Assets/XR/XRGeneralSettings.asset
+      fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/XRGeneralSettings.asset
+      projectPath: Assets/XR/XRGeneralSettings.asset
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
-    - path: Assets/Scenes/SampleScene.unity.meta
-      fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity.meta
-      projectPath: Assets/Scenes/SampleScene.unity.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Packages/manifest.json
-      fullPath: /home/thilo/sg-ws2223-p01/Packages/manifest.json
-      projectPath: Packages/manifest.json
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Packages/packages-lock.json
-      fullPath: /home/thilo/sg-ws2223-p01/Packages/packages-lock.json
-      projectPath: Packages/packages-lock.json
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/AudioManager.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/AudioManager.asset
-      projectPath: ProjectSettings/AudioManager.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/boot.config
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/boot.config
-      projectPath: ProjectSettings/boot.config
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/ClusterInputManager.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ClusterInputManager.asset
-      projectPath: ProjectSettings/ClusterInputManager.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/DynamicsManager.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/DynamicsManager.asset
-      projectPath: ProjectSettings/DynamicsManager.asset
+    - path: Assets/XR/XRGeneralSettings.asset.meta
+      fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/XRGeneralSettings.asset.meta
+      projectPath: Assets/XR/XRGeneralSettings.asset.meta
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
@@ -1904,119 +1059,23 @@ MonoBehaviour:
       fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorBuildSettings.asset
       projectPath: ProjectSettings/EditorBuildSettings.asset
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/EditorSettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorSettings.asset
-      projectPath: ProjectSettings/EditorSettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/GraphicsSettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/GraphicsSettings.asset
-      projectPath: ProjectSettings/GraphicsSettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/InputManager.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/InputManager.asset
-      projectPath: ProjectSettings/InputManager.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/MemorySettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/MemorySettings.asset
-      projectPath: ProjectSettings/MemorySettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/NavMeshAreas.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/NavMeshAreas.asset
-      projectPath: ProjectSettings/NavMeshAreas.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/PackageManagerSettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PackageManagerSettings.asset
-      projectPath: ProjectSettings/PackageManagerSettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
-      projectPath: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/Physics2DSettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Physics2DSettings.asset
-      projectPath: ProjectSettings/Physics2DSettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/PresetManager.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PresetManager.asset
-      projectPath: ProjectSettings/PresetManager.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+      indexStatus: 0
+      workTreeStatus: 3
     - path: ProjectSettings/ProjectSettings.asset
       fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectSettings.asset
       projectPath: ProjectSettings/ProjectSettings.asset
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/ProjectVersion.txt
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectVersion.txt
-      projectPath: ProjectSettings/ProjectVersion.txt
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: ProjectSettings/SceneTemplateSettings.json
+      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/SceneTemplateSettings.json
+      projectPath: ProjectSettings/SceneTemplateSettings.json
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
-    - path: ProjectSettings/QualitySettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/QualitySettings.asset
-      projectPath: ProjectSettings/QualitySettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/TagManager.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TagManager.asset
-      projectPath: ProjectSettings/TagManager.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/TimeManager.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TimeManager.asset
-      projectPath: ProjectSettings/TimeManager.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/UnityConnectSettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/UnityConnectSettings.asset
-      projectPath: ProjectSettings/UnityConnectSettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/VersionControlSettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VersionControlSettings.asset
-      projectPath: ProjectSettings/VersionControlSettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/VFXManager.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VFXManager.asset
-      projectPath: ProjectSettings/VFXManager.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/XRSettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/XRSettings.asset
-      projectPath: ProjectSettings/XRSettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: UserSettings/EditorUserSettings.asset
-      fullPath: /home/thilo/sg-ws2223-p01/UserSettings/EditorUserSettings.asset
-      projectPath: UserSettings/EditorUserSettings.asset
+    - path: ProjectSettings/TimelineSettings.asset
+      fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TimelineSettings.asset
+      projectPath: ProjectSettings/TimelineSettings.asset
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
@@ -2024,28 +1083,346 @@ MonoBehaviour:
       fullPath: /home/thilo/sg-ws2223-p01/UserSettings/Layouts/default-2021.dwlt
       projectPath: UserSettings/Layouts/default-2021.dwlt
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: UserSettings/Search.settings
-      fullPath: /home/thilo/sg-ws2223-p01/UserSettings/Search.settings
-      projectPath: UserSettings/Search.settings
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    changedFilesText: 32 changed files
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 9 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2022-11-01T22:02:05.988+01:00
+      updatedTimeString: 2022-11-01T22:29:32.646+01:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2022-11-01T22:02:06.169+01:00
+      updatedTimeString: 2022-11-01T22:36:03.867+01:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2022-11-01T22:02:06.164+01:00
+      updatedTimeString: 2022-11-01T22:29:36.382+01:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: b865dae636b262709fb22239b53409ab10afdc7d
+      mergeA: 
+      mergeB: 
+      authorName: Thilo Billerbeck
+      authorEmail: thilo.billerbeck@officerent.de
+      commitEmail: thilo.billerbeck@officerent.de
+      commitName: Thilo Billerbeck
+      summary: added / removed dependencies
+      description: 
+      timeString: 2022-11-01T22:26:58.000+01:00
+      commitTimeString: 2022-11-01T22:26:58.000+01:00
+      changes:
+      - path: Assets/XR.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR.meta
+        projectPath: Assets/XR.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Loaders.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders.meta
+        projectPath: Assets/XR/Loaders.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Loaders/Oculus Loader.asset
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders/Oculus Loader.asset
+        projectPath: Assets/XR/Loaders/Oculus Loader.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Loaders/Oculus Loader.asset.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders/Oculus Loader.asset.meta
+        projectPath: Assets/XR/Loaders/Oculus Loader.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Loaders/Open XR Loader.asset
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders/Open XR Loader.asset
+        projectPath: Assets/XR/Loaders/Open XR Loader.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Loaders/Open XR Loader.asset.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders/Open XR Loader.asset.meta
+        projectPath: Assets/XR/Loaders/Open XR Loader.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Settings.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings.meta
+        projectPath: Assets/XR/Settings.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Settings/Oculus Settings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/Oculus Settings.asset
+        projectPath: Assets/XR/Settings/Oculus Settings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Settings/Oculus Settings.asset.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/Oculus Settings.asset.meta
+        projectPath: Assets/XR/Settings/Oculus Settings.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Settings/OpenXR Package Settings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Package Settings.asset
+        projectPath: Assets/XR/Settings/OpenXR Package Settings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/XR/Settings/OpenXR Package Settings.asset.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Package Settings.asset.meta
+        projectPath: Assets/XR/Settings/OpenXR Package Settings.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages/manifest.json
+        fullPath: /home/thilo/sg-ws2223-p01/Packages/manifest.json
+        projectPath: Packages/manifest.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages/packages-lock.json
+        fullPath: /home/thilo/sg-ws2223-p01/Packages/packages-lock.json
+        projectPath: Packages/packages-lock.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings/EditorBuildSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorBuildSettings.asset
+        projectPath: ProjectSettings/EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings/XRPackageSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/XRPackageSettings.asset
+        projectPath: ProjectSettings/XRPackageSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: ee1de6c99715914b966f554842cddb7ec637b418
+      mergeA: 
+      mergeB: 
+      authorName: Thilo Billerbeck
+      authorEmail: thilo.billerbeck@officerent.de
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: added readme file
+      description: 
+      timeString: 2022-11-01T22:16:10.000+01:00
+      commitTimeString: 2022-11-01T22:16:10.000+01:00
+      changes:
+      - path: README.md
+        fullPath: /home/thilo/sg-ws2223-p01/README.md
+        projectPath: README.md
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: c60268a4a72d7f0d9c08b7655b0a69a4dfc4bc7d
+      mergeA: 
+      mergeB: 
+      authorName: Thilo Billerbeck
+      authorEmail: thilo.billerbeck@officerent.de
+      commitEmail: thilo.billerbeck@officerent.de
+      commitName: Thilo Billerbeck
+      summary: add initial project files
+      description: 
+      timeString: 2022-11-01T22:07:29.000+01:00
+      commitTimeString: 2022-11-01T22:07:29.000+01:00
+      changes:
+      - path: .vscode/settings.json
+        fullPath: /home/thilo/sg-ws2223-p01/.vscode/settings.json
+        projectPath: .vscode/settings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scenes.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes.meta
+        projectPath: Assets/Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scenes/SampleScene.unity
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity
+        projectPath: Assets/Scenes/SampleScene.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scenes/SampleScene.unity.meta
+        fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity.meta
+        projectPath: Assets/Scenes/SampleScene.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages/manifest.json
+        fullPath: /home/thilo/sg-ws2223-p01/Packages/manifest.json
+        projectPath: Packages/manifest.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages/packages-lock.json
+        fullPath: /home/thilo/sg-ws2223-p01/Packages/packages-lock.json
+        projectPath: Packages/packages-lock.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/AudioManager.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/AudioManager.asset
+        projectPath: ProjectSettings/AudioManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/ClusterInputManager.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ClusterInputManager.asset
+        projectPath: ProjectSettings/ClusterInputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/DynamicsManager.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/DynamicsManager.asset
+        projectPath: ProjectSettings/DynamicsManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/EditorBuildSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorBuildSettings.asset
+        projectPath: ProjectSettings/EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/EditorSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorSettings.asset
+        projectPath: ProjectSettings/EditorSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/GraphicsSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/GraphicsSettings.asset
+        projectPath: ProjectSettings/GraphicsSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/InputManager.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/InputManager.asset
+        projectPath: ProjectSettings/InputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/MemorySettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/MemorySettings.asset
+        projectPath: ProjectSettings/MemorySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/NavMeshAreas.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/NavMeshAreas.asset
+        projectPath: ProjectSettings/NavMeshAreas.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/PackageManagerSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PackageManagerSettings.asset
+        projectPath: ProjectSettings/PackageManagerSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+        projectPath: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/Physics2DSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Physics2DSettings.asset
+        projectPath: ProjectSettings/Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/PresetManager.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PresetManager.asset
+        projectPath: ProjectSettings/PresetManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/ProjectSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectSettings.asset
+        projectPath: ProjectSettings/ProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/ProjectVersion.txt
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectVersion.txt
+        projectPath: ProjectSettings/ProjectVersion.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/QualitySettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/QualitySettings.asset
+        projectPath: ProjectSettings/QualitySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/TagManager.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TagManager.asset
+        projectPath: ProjectSettings/TagManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/TimeManager.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TimeManager.asset
+        projectPath: ProjectSettings/TimeManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/UnityConnectSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/UnityConnectSettings.asset
+        projectPath: ProjectSettings/UnityConnectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/VFXManager.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VFXManager.asset
+        projectPath: ProjectSettings/VFXManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/VersionControlSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VersionControlSettings.asset
+        projectPath: ProjectSettings/VersionControlSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/XRSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/XRSettings.asset
+        projectPath: ProjectSettings/XRSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/boot.config
+        fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/boot.config
+        projectPath: ProjectSettings/boot.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings/EditorUserSettings.asset
+        fullPath: /home/thilo/sg-ws2223-p01/UserSettings/EditorUserSettings.asset
+        projectPath: UserSettings/EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings/Layouts/default-2021.dwlt
+        fullPath: /home/thilo/sg-ws2223-p01/UserSettings/Layouts/default-2021.dwlt
+        projectPath: UserSettings/Layouts/default-2021.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings/Search.settings
+        fullPath: /home/thilo/sg-ws2223-p01/UserSettings/Search.settings
+        projectPath: UserSettings/Search.settings
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
     - commitID: 8243babd677551c94aab4b20c0b1a59fc2408171
       mergeA: 
       mergeB: 
@@ -2076,16 +1453,340 @@ MonoBehaviour:
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-    statusAhead: 0
+    statusAhead: 1
     lastLogChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2022-11-01T22:29:42.252+01:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2022-11-01T22:29:32.828+01:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: b865dae636b262709fb22239b53409ab10afdc7d
+        mergeA: 
+        mergeB: 
+        authorName: Thilo Billerbeck
+        authorEmail: thilo.billerbeck@officerent.de
+        commitEmail: thilo.billerbeck@officerent.de
+        commitName: Thilo Billerbeck
+        summary: added / removed dependencies
+        description: 
+        timeString: 2022-11-01T22:26:58.000+01:00
+        commitTimeString: 2022-11-01T22:26:58.000+01:00
+        changes:
+        - path: Assets/XR.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR.meta
+          projectPath: Assets/XR.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Loaders.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders.meta
+          projectPath: Assets/XR/Loaders.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Loaders/Oculus Loader.asset
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders/Oculus Loader.asset
+          projectPath: Assets/XR/Loaders/Oculus Loader.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Loaders/Oculus Loader.asset.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders/Oculus Loader.asset.meta
+          projectPath: Assets/XR/Loaders/Oculus Loader.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Loaders/Open XR Loader.asset
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders/Open XR Loader.asset
+          projectPath: Assets/XR/Loaders/Open XR Loader.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Loaders/Open XR Loader.asset.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Loaders/Open XR Loader.asset.meta
+          projectPath: Assets/XR/Loaders/Open XR Loader.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Settings.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings.meta
+          projectPath: Assets/XR/Settings.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Settings/Oculus Settings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/Oculus Settings.asset
+          projectPath: Assets/XR/Settings/Oculus Settings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Settings/Oculus Settings.asset.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/Oculus Settings.asset.meta
+          projectPath: Assets/XR/Settings/Oculus Settings.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Settings/OpenXR Package Settings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Package Settings.asset
+          projectPath: Assets/XR/Settings/OpenXR Package Settings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/XR/Settings/OpenXR Package Settings.asset.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/XR/Settings/OpenXR Package Settings.asset.meta
+          projectPath: Assets/XR/Settings/OpenXR Package Settings.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages/manifest.json
+          fullPath: /home/thilo/sg-ws2223-p01/Packages/manifest.json
+          projectPath: Packages/manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages/packages-lock.json
+          fullPath: /home/thilo/sg-ws2223-p01/Packages/packages-lock.json
+          projectPath: Packages/packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings/EditorBuildSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorBuildSettings.asset
+          projectPath: ProjectSettings/EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings/XRPackageSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/XRPackageSettings.asset
+          projectPath: ProjectSettings/XRPackageSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: ee1de6c99715914b966f554842cddb7ec637b418
+        mergeA: 
+        mergeB: 
+        authorName: Thilo Billerbeck
+        authorEmail: thilo.billerbeck@officerent.de
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: added readme file
+        description: 
+        timeString: 2022-11-01T22:16:10.000+01:00
+        commitTimeString: 2022-11-01T22:16:10.000+01:00
+        changes:
+        - path: README.md
+          fullPath: /home/thilo/sg-ws2223-p01/README.md
+          projectPath: README.md
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: c60268a4a72d7f0d9c08b7655b0a69a4dfc4bc7d
+        mergeA: 
+        mergeB: 
+        authorName: Thilo Billerbeck
+        authorEmail: thilo.billerbeck@officerent.de
+        commitEmail: thilo.billerbeck@officerent.de
+        commitName: Thilo Billerbeck
+        summary: add initial project files
+        description: 
+        timeString: 2022-11-01T22:07:29.000+01:00
+        commitTimeString: 2022-11-01T22:07:29.000+01:00
+        changes:
+        - path: .vscode/settings.json
+          fullPath: /home/thilo/sg-ws2223-p01/.vscode/settings.json
+          projectPath: .vscode/settings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scenes.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes.meta
+          projectPath: Assets/Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scenes/SampleScene.unity
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity
+          projectPath: Assets/Scenes/SampleScene.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scenes/SampleScene.unity.meta
+          fullPath: /home/thilo/sg-ws2223-p01/Assets/Scenes/SampleScene.unity.meta
+          projectPath: Assets/Scenes/SampleScene.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages/manifest.json
+          fullPath: /home/thilo/sg-ws2223-p01/Packages/manifest.json
+          projectPath: Packages/manifest.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages/packages-lock.json
+          fullPath: /home/thilo/sg-ws2223-p01/Packages/packages-lock.json
+          projectPath: Packages/packages-lock.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/AudioManager.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/AudioManager.asset
+          projectPath: ProjectSettings/AudioManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/ClusterInputManager.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ClusterInputManager.asset
+          projectPath: ProjectSettings/ClusterInputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/DynamicsManager.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/DynamicsManager.asset
+          projectPath: ProjectSettings/DynamicsManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/EditorBuildSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorBuildSettings.asset
+          projectPath: ProjectSettings/EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/EditorSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/EditorSettings.asset
+          projectPath: ProjectSettings/EditorSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/GraphicsSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/GraphicsSettings.asset
+          projectPath: ProjectSettings/GraphicsSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/InputManager.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/InputManager.asset
+          projectPath: ProjectSettings/InputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/MemorySettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/MemorySettings.asset
+          projectPath: ProjectSettings/MemorySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/NavMeshAreas.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/NavMeshAreas.asset
+          projectPath: ProjectSettings/NavMeshAreas.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/PackageManagerSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PackageManagerSettings.asset
+          projectPath: ProjectSettings/PackageManagerSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+          projectPath: ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/Physics2DSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/Physics2DSettings.asset
+          projectPath: ProjectSettings/Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/PresetManager.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/PresetManager.asset
+          projectPath: ProjectSettings/PresetManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/ProjectSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectSettings.asset
+          projectPath: ProjectSettings/ProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/ProjectVersion.txt
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/ProjectVersion.txt
+          projectPath: ProjectSettings/ProjectVersion.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/QualitySettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/QualitySettings.asset
+          projectPath: ProjectSettings/QualitySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/TagManager.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TagManager.asset
+          projectPath: ProjectSettings/TagManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/TimeManager.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/TimeManager.asset
+          projectPath: ProjectSettings/TimeManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/UnityConnectSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/UnityConnectSettings.asset
+          projectPath: ProjectSettings/UnityConnectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/VFXManager.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VFXManager.asset
+          projectPath: ProjectSettings/VFXManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/VersionControlSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/VersionControlSettings.asset
+          projectPath: ProjectSettings/VersionControlSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/XRSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/XRSettings.asset
+          projectPath: ProjectSettings/XRSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/boot.config
+          fullPath: /home/thilo/sg-ws2223-p01/ProjectSettings/boot.config
+          projectPath: ProjectSettings/boot.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings/EditorUserSettings.asset
+          fullPath: /home/thilo/sg-ws2223-p01/UserSettings/EditorUserSettings.asset
+          projectPath: UserSettings/EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings/Layouts/default-2021.dwlt
+          fullPath: /home/thilo/sg-ws2223-p01/UserSettings/Layouts/default-2021.dwlt
+          projectPath: UserSettings/Layouts/default-2021.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings/Search.settings
+          fullPath: /home/thilo/sg-ws2223-p01/UserSettings/Search.settings
+          projectPath: UserSettings/Search.settings
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
       - commitID: 8243babd677551c94aab4b20c0b1a59fc2408171
         mergeA: 
         mergeB: 
@@ -2116,36 +1817,24 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      statusAhead: 0
-      selectedIndex: 0
+      statusAhead: 1
+      selectedIndex: 1
     selectedEntry:
-      commitID: 8243babd677551c94aab4b20c0b1a59fc2408171
+      commitID: ee1de6c99715914b966f554842cddb7ec637b418
       mergeA: 
       mergeB: 
       authorName: Thilo Billerbeck
       authorEmail: thilo.billerbeck@officerent.de
-      commitEmail: thilo.billerbeck@officerent.de
-      commitName: Thilo Billerbeck
-      summary: Initial commit
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: added readme file
       description: 
-      timeString: 2022-11-01T22:02:05.000+01:00
-      commitTimeString: 2022-11-01T22:02:05.000+01:00
+      timeString: 2022-11-01T22:16:10.000+01:00
+      commitTimeString: 2022-11-01T22:16:10.000+01:00
       changes:
-      - path: .gitattributes
-        fullPath: /home/thilo/sg-ws2223-p01/.gitattributes
-        projectPath: .gitattributes
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: .gitignore
-        fullPath: /home/thilo/sg-ws2223-p01/.gitignore
-        projectPath: .gitignore
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets/.gitignore
-        fullPath: /home/thilo/sg-ws2223-p01/Assets/.gitignore
-        projectPath: Assets/.gitignore
+      - path: README.md
+        fullPath: /home/thilo/sg-ws2223-p01/README.md
+        projectPath: README.md
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
@@ -2154,27 +1843,8 @@ MonoBehaviour:
         keys: []
         values: []
       folders:
-        keys:
-        - Assets
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -2203,8 +1873,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: .gitattributes
-        label: .gitattributes
+      - path: README.md
+        label: README.md
         level: 0
         isFolder: 0
         isContainer: 0
@@ -2215,63 +1885,9 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: .gitattributes
-          fullPath: /home/thilo/sg-ws2223-p01/.gitattributes
-          projectPath: .gitattributes
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: .gitignore
-        label: .gitignore
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: .gitignore
-          fullPath: /home/thilo/sg-ws2223-p01/.gitignore
-          projectPath: .gitignore
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets/.gitignore
-        label: .gitignore
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets/.gitignore
-          fullPath: /home/thilo/sg-ws2223-p01/Assets/.gitignore
-          projectPath: Assets/.gitignore
+          path: README.md
+          fullPath: /home/thilo/sg-ws2223-p01/README.md
+          projectPath: README.md
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
@@ -2303,13 +1919,13 @@ MonoBehaviour:
       resetToBundled: 0
       resetToSystem: 0
       changingManually: 0
-    hasRemote: 0
+    hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2022-11-01T22:02:05.988+01:00
+      updatedTimeString: 2022-11-01T22:06:12.129+01:00
       cacheType: 1
-    newRepositoryRemoteUrl: https://github.com/SG-Stress-Simulation/game.git
+    newRepositoryRemoteUrl: git@github.com:SG-Stress-Simulation/game.git
     repositoryRemoteName: origin
-    repositoryRemoteUrl: 
+    repositoryRemoteUrl: git@github.com:SG-Stress-Simulation/game.git
     scroll: {x: 0, y: 0}
     userSettingsView:
       gitName: Thilo Billerbeck
@@ -2318,7 +1934,7 @@ MonoBehaviour:
       newGitEmail: thilo.billerbeck@officerent.de
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2022-11-01T22:01:47.778+01:00
+        updatedTimeString: 2022-11-01T22:06:16.429+01:00
         cacheType: 8
     webTimeout: 100000
     gitTimeout: 5000
@@ -2558,30 +2174,30 @@ MonoBehaviour:
       m_Text: Release Lock (forced)
       m_Image: {fileID: 0}
       m_Tooltip: 
-  hasRemote: 0
-  currentRemoteName: 
+  hasRemote: 1
+  currentRemoteName: origin
   currentBranch: master
-  currentRemoteUrl: No remote configured
-  statusAhead: 0
+  currentRemoteUrl: git@github.com:SG-Stress-Simulation/game.git
+  statusAhead: 1
   statusBehind: 0
   hasItemsToCommit: 1
-  isTrackingRemoteBranch: 0
+  isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
     m_Image: {fileID: 0}
     m_Tooltip: Active branch
   currentRemoteUrlContent:
-    m_Text: No remote configured
+    m_Text: git@github.com:SG-Stress-Simulation/game.git
     m_Image: {fileID: 0}
-    m_Tooltip: Add a remote in the Settings tab
+    m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2022-11-01T22:02:05.988+01:00
+    updatedTimeString: 2022-11-01T22:29:32.646+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 0001-01-01T00:00:00.000+00:00
+    updatedTimeString: 2022-11-01T22:29:32.828+01:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2022-11-01T22:02:06.169+01:00
+    updatedTimeString: 2022-11-01T22:36:03.867+01:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2601,7 +2217,7 @@ MonoBehaviour:
     m_Tooltip: 
   repositoryProgressValue: 0
   repositoryProgressMessage: 
-  appManagerProgressValue: 1
+  appManagerProgressValue: 0.75
   appManagerProgressMessage: 
   primaryConnectionUsername: 
 --- !u!114 &13
@@ -2660,7 +2276,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 805d0000
     m_LastClickedID: 23936
-    m_ExpandedIDs: 00000000025a0000
+    m_ExpandedIDs: 000000002c5c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2688,7 +2304,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000025a0000
+    m_ExpandedIDs: 000000002c5c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2778,7 +2394,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: -2954
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -2816,9 +2432,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 94010000
       m_LastClickedID: 0
-      m_ExpandedIDs: 38fbffff
+      m_ExpandedIDs: 32fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
