@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - InvalidTeleportLocation
+  - Ignore Collision Fade
+  - AppleStem
+  - ScarecrowHand
+  - ScarecrowArm
+  - TeleportTargetPoint
+  - WoodSaw
+  - Hammer
+  - TeleportTargetArea
+  - Hacksaw
+  - HeadsetFaderCollider
+  - ScarecrowHat
+  - ScarecrowHead
+  - FireableArrow
   layers:
   - Default
   - TransparentFX
@@ -13,7 +27,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - IgnoreTeleportPointer
   - 
   - 
   - 
