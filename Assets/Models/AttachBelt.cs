@@ -28,7 +28,8 @@ public class AttachBelt : MonoBehaviour
         Vector3 beltPosition = anchorPoint - Vector3.up * torsoOffset;
         // We set the belt position
         transform.position = beltPosition;
-        // The belt rotation is the same in the y axis as the camera rotation
-        transform.rotation = Quaternion.Euler(0, camera.transform.rotation.eulerAngles.y, 0);
+        // We set the belt rotation to be lined up with the camera
+        transform.rotation = Quaternion.LookRotation(camera.transform.up, camera.transform.forward);
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 }
