@@ -30,3 +30,14 @@ ExportedObj/
 # Builds
 *.apk
 *.unitypackage
+
+Assets/Quixel.meta
+Assets/Quixel/Megascans.meta
+Assets/Quixel/Megascans/Surfaces.meta
+Assets/Quixel/Scripts
+Assets/Quixel/Scripts.meta
+Assets/UnityPackages.meta
+Assets/UnityPackages/JsonNet.meta
+Assets/UnityPackages/JsonNetSample.meta
+Assets/UnityPackages/JsonNetSample/JsonNetSample.cs
+Assets/UnityPackages/JsonNetSample/JsonNetSample.cs.meta
