@@ -18,6 +18,7 @@ TagManager:
   - ScarecrowHat
   - ScarecrowHead
   - FireableArrow
+  - Handgun
   layers:
   - Default
   - TransparentFX
