@@ -18,7 +18,7 @@ public class OutlineBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
+        Debug.Log(other);
         if (other == sourceLeft.GetComponent<Collider>() || other == sourceRight.GetComponent<Collider>())
         {
             Debug.Log("Trigger entered");
@@ -31,6 +31,9 @@ public class OutlineBehaviour : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Destroy(GetComponent<Outline>());
+        if (other == sourceLeft.GetComponent<Collider>() || other == sourceRight.GetComponent<Collider>())
+        {
+            Destroy(GetComponent<Outline>());
+        }
     }
 }
