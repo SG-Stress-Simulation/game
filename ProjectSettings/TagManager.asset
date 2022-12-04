@@ -20,6 +20,7 @@ TagManager:
   - FireableArrow
   - Holster
   - Flashlight
+  - Baton
   layers:
   - Default
   - TransparentFX
