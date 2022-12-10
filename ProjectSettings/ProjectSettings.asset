@@ -17,7 +17,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 0
+  m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -603,7 +603,19 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Standalone: ZINNIA_USE_CUSTOM_LIST_EDITOR
+    Android: PROBUILDER_EXPERIMENTAL_FEATURES
+    EmbeddedLinux: PROBUILDER_EXPERIMENTAL_FEATURES
+    GameCoreXboxOne: PROBUILDER_EXPERIMENTAL_FEATURES
+    Lumin: PROBUILDER_EXPERIMENTAL_FEATURES
+    Nintendo Switch: PROBUILDER_EXPERIMENTAL_FEATURES
+    PS4: PROBUILDER_EXPERIMENTAL_FEATURES
+    PS5: PROBUILDER_EXPERIMENTAL_FEATURES
+    Stadia: PROBUILDER_EXPERIMENTAL_FEATURES
+    Standalone: ZINNIA_USE_CUSTOM_LIST_EDITOR;PROBUILDER_EXPERIMENTAL_FEATURES
+    WebGL: PROBUILDER_EXPERIMENTAL_FEATURES
+    Windows Store Apps: PROBUILDER_EXPERIMENTAL_FEATURES
+    XboxOne: PROBUILDER_EXPERIMENTAL_FEATURES
+    tvOS: PROBUILDER_EXPERIMENTAL_FEATURES
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
