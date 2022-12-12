@@ -9,7 +9,13 @@ public class FlickerControl : MonoBehaviour
     public float timeDelay;
     public float flickeringDelayOff;
     public float flickeringDelayOn;
-    public AudioSource audioSource;
+    public AudioSource audioSourceOn;
+    public AudioSource audioSourceOff;
+
+    public AudioSource buzzing;
+
+    public Material matOff;
+    public Material matOn;
 
     // Update is called once per frame
     void Update()
@@ -21,14 +27,18 @@ public class FlickerControl : MonoBehaviour
     }
 
     IEnumerator FlickeringLight(){
-        audioSource.Play();
+        audioSourceOff.Play();
+        buzzing.Stop();
         isFlickering = true;
         this.gameObject.GetComponent<Light>().enabled = false;
-	    timeDelay = Random.Range(0.01f, flickeringDelayOff);
+        this.gameObject.GetComponent<MeshRenderer>().material = matOff;
+        timeDelay = Random.Range(0.01f, flickeringDelayOff);
         yield return new WaitForSeconds(timeDelay);
 
-        audioSource.Play();
+        audioSourceOn.Play();
+        buzzing.Play();
         this.gameObject.GetComponent<Light>().enabled = true;
+        this.gameObject.GetComponent<MeshRenderer>().material = matOn;
         timeDelay = Random.Range(0.01f, flickeringDelayOn);
         yield return new WaitForSeconds(timeDelay);
         isFlickering = false;
