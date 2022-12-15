@@ -11,7 +11,7 @@ public class ShootAction : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(gameObject. transform.position, transform.forward, out hit))
+        if (Physics.Raycast(gameObject.transform.position, transform.forward, out hit))
         {
             if (hit.collider.gameObject.tag == "Enemy")
             {
