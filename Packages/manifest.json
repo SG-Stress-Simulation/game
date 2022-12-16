@@ -9,7 +9,7 @@
     }
   ],
   "dependencies": {
-    "com.unity.collab-proxy": "1.17.6",
+    "com.unity.collab-proxy": "1.17.7",
     "com.unity.editorcoroutines": "1.0.0",
     "com.unity.formats.fbx": "4.1.2",
     "com.unity.ide.rider": "3.0.16",
