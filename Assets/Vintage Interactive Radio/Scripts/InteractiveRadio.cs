@@ -24,7 +24,7 @@ public class InteractiveRadio : MonoBehaviour
 	{
 		// Starting volume of our audio
 		// source is 0
-		audio.volume = 0f;
+		GetComponent<AudioSource>().volume = 0f;
 
 		// Get references to all the controls
 		volumeKnob = GetComponentInChildren<VolumeKnob>();
@@ -33,8 +33,8 @@ public class InteractiveRadio : MonoBehaviour
 
 		// Pass the audio source to the
 		// controls for reference
-		volumeKnob.controlledAudio = audio;
-		toggleSwitch.controlledAudio = audio;
+		volumeKnob.controlledAudio = GetComponent<AudioSource>();
+		toggleSwitch.controlledAudio = GetComponent<AudioSource>();
 
 		// Set the starting rotation speeds
 		volumeKnob.rotationSpeed = volumeRotationSpeed;
@@ -92,13 +92,13 @@ public class InteractiveRadio : MonoBehaviour
 			{
 				// The white noise is playing or
 				// the clip is null exit
-				if(audio.clip == whiteNoise)
+				if(GetComponent<AudioSource>().clip == whiteNoise)
 					return;
 
 				// Stop audio
-				audio.Stop ();
-				audio.clip = whiteNoise;
-				audio.Play ();
+				GetComponent<AudioSource>().Stop ();
+				GetComponent<AudioSource>().clip = whiteNoise;
+				GetComponent<AudioSource>().Play ();
 			}
 
 			// If there is no white noise
@@ -106,8 +106,8 @@ public class InteractiveRadio : MonoBehaviour
 			// clip
 			else
 			{
-				audio.Stop ();
-				audio.clip = null;
+				GetComponent<AudioSource>().Stop ();
+				GetComponent<AudioSource>().clip = null;
 			}
 
 
@@ -118,11 +118,11 @@ public class InteractiveRadio : MonoBehaviour
 		// with the station
 		else
 		{
-			if(audio.clip != targetStation.clip)
+			if(GetComponent<AudioSource>().clip != targetStation.clip)
 			{
-				audio.Stop ();
-				audio.clip = targetStation.clip;
-				audio.Play ();
+				GetComponent<AudioSource>().Stop ();
+				GetComponent<AudioSource>().clip = targetStation.clip;
+				GetComponent<AudioSource>().Play ();
 			}
 		}
 	}
