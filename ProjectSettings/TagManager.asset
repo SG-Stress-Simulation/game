@@ -19,6 +19,9 @@ TagManager:
   - ScarecrowHead
   - FireableArrow
   - Holster
+  - Flashlight
+  - Baton
+  - Pepperspray
   layers:
   - Default
   - TransparentFX
