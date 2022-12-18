@@ -2,7 +2,11 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
+using UnityEngine.XR;
+using CommonUsages = UnityEngine.InputSystem.CommonUsages;
 
 [RequireComponent(typeof(TextMeshPro))]
 public class StartupBehaviour : MonoBehaviour
@@ -12,6 +16,8 @@ public class StartupBehaviour : MonoBehaviour
 
     [Tooltip("in seconds between each alpha-channel change")]
     public float waitTime;
+
+    public InputActionAsset input;
 
     private bool played;
     private TextMeshPro textMesh;

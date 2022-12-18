@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bounce : MonoBehaviour
 {
     [Tooltip("Y-Axis offset of the object.")]
-    public int offset;
+    public float offset;
 
     [Tooltip("Divider for cos function to reduce bounce height.")]
     public int hoverDivider;
