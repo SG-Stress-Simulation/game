@@ -73,6 +73,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WireThickness: 100
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.7264151, g: 0.7024297, b: 0.7024297, a: 1}
