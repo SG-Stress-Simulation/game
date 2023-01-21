@@ -1,0 +1,64 @@
+ERCO Leuchten GmbH
+501_5 - IES format
+ERCO *****
+ERCO Spotlight
+LAMPE
+1*QR-CBC51 50W/12V 10³
+light output ratio: 0.7478
+ident no. for symmetry: 1
+D694
+TILT=NONE
+ 1
+ 900
+ .9
+ 19
+ 1
+ 1
+ 2
+ .051
+ .051
+ 0
+ 1
+ 1
+ 50
+ 0
+ 5
+ 10
+ 15
+ 20
+ 25
+ 30
+ 35
+ 40
+ 45
+ 50
+ 55
+ 60
+ 65
+ 70
+ 75
+ 80
+ 85
+ 90
+ 0
+ 16666
+ 8333
+ 1500
+ 500
+ 200
+ 80
+ 20
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+END
+

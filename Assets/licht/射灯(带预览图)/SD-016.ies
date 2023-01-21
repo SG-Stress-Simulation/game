@@ -1,0 +1,64 @@
+ERCO Leuchten GmbH
+s198_2 - IES format
+ERCO *****
+ERCO Strahler
+LAMPE
+1*PAR38 120W 12³
+light output ratio: 0.8314
+ident no. for symmetry: 1
+D694
+TILT=NONE
+ 1
+ 1200
+ 1.2
+ 19
+ 1
+ 1
+ 2
+-.122
+ 0
+ 0
+ 1
+ 1
+ 120
+ 0
+ 5
+ 10
+ 15
+ 20
+ 25
+ 30
+ 35
+ 40
+ 45
+ 50
+ 55
+ 60
+ 65
+ 70
+ 75
+ 80
+ 85
+ 90
+ 0
+ 7750
+ 4000
+ 1700
+ 950
+ 650
+ 450
+ 200
+ 60
+ 20
+ 5
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+END
+

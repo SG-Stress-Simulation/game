@@ -1,0 +1,13 @@
+IESNA91
+[TEST]     Test unknown
+[MANUFAC]  Manufacturing company unknown
+TILT=NONE
+1 5.84 1
+8 1
+1
+2
+0 0 0
+1 1 0
+ 0.00 25.38 42.36 71.58 120.00 125.60 140.00 180.00
+ 0.00
+ 0.00 1.04 1.05 0.15 0.00 0.26 1.40 0.17
