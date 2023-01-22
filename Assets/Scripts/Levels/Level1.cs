@@ -15,7 +15,7 @@ public class Level1 : MonoBehaviour
 {
   public float animationDistance = 3f;
   public float animationDuration = 2f;
-  float timeToNextEffect = 2f;
+  float timeToNextEffect = Random.Range(5f, 10f);
   float timeToEffectEnd = Mathf.PI * 5;
   bool effectStarted = false;
   private EffectType currentEffect = EffectType.FOVDecrease;
@@ -67,7 +67,7 @@ public class Level1 : MonoBehaviour
         m_ColorGrading.saturation.Override( 0f);
         break;
     }
-    timeToNextEffect = Random.Range(2f, 2f);
+    timeToNextEffect = Random.Range(5f, 10f);
     timeToEffectEnd = Mathf.PI * 5;
   }
   
@@ -79,7 +79,7 @@ public class Level1 : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    timeToNextEffect = Random.Range(2f, 2f);
+    timeToNextEffect = Random.Range(5f, 10f);
     timeToEffectEnd = Mathf.PI * 5;
       // Create an instance of a vignette
        m_Vignette = ScriptableObject.CreateInstance<Vignette>();
