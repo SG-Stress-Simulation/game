@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
+using System.IO;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Level1 : MonoBehaviour
 {
   public float animationDistance = 3f;
   public float animationDuration = 2f;
-  public float timeToNextEffect = 520f;
-  public float timeToEffectEnd = 520f;
+  float timeToNextEffect = 2f;
+  float timeToEffectEnd = Mathf.PI * 5;
+  bool effectStarted = false;
 
    PostProcessVolume m_Volume;
    Vignette m_Vignette;
@@ -33,29 +37,29 @@ public class Level1 : MonoBehaviour
   
   void UpdateEffect()
   {
-    m_Vignette.intensity.value = Mathf.Lerp(0.5f, 1f, (timeToEffectEnd - timeToNextEffect) / timeToEffectEnd);
+    m_Vignette.intensity.Override( Mathf.Sin(timeToEffectEnd / 5) * 0.5f + (Mathf.Sin(Time.realtimeSinceStartup)) * 0.2f);
   }
   
   void DisableEffect()
   {
-    m_Vignette.intensity.value = 0f;
-    timeToNextEffect = Random.Range(520f, 520f);
-    timeToEffectEnd = Random.Range(520f, 520f);
+    m_Vignette.intensity.Override( 0f);
+    timeToNextEffect = Random.Range(2f, 2f);
+    timeToEffectEnd = Mathf.PI * 5;
   }
   
   void StartEffect()
   {
-    m_Vignette.intensity.value = 0.5f;
+    effectStarted = true;
   }
 
   // Start is called before the first frame update
   void Start()
   {
-    timeToNextEffect = Random.Range(520f, 520f);
+    timeToNextEffect = Random.Range(2f, 2f);
+    timeToEffectEnd = Mathf.PI * 5;
       // Create an instance of a vignette
        m_Vignette = ScriptableObject.CreateInstance<Vignette>();
        m_Vignette.enabled.Override(true);
-       m_Vignette.intensity.Override(1f);
       // Use the QuickVolume method to create a volume with a priority of 100, and assign the vignette to this volume
        m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_Vignette);
   }
@@ -65,12 +69,16 @@ public class Level1 : MonoBehaviour
   {
     if(timeToNextEffect > 0f)  {
       timeToNextEffect -= Time.deltaTime;
-    } else if(timeToNextEffect <= 0f && timeToEffectEnd > 0f) {
+    } else if(timeToNextEffect <= 0f && !effectStarted) {
       StartEffect();
-    } else if(timeToEffectEnd <= 0f) {
+      Debug.Log("Effect Started");
+    } else if(timeToEffectEnd <= 0f && effectStarted) {
       DisableEffect();
+      Debug.Log("Effect Disabled");
     } else {
       UpdateEffect();
+      timeToEffectEnd -= Time.deltaTime;
+      Debug.Log("Time to effect end: " + timeToEffectEnd);
     }
   }
 
