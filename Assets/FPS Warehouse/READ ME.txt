@@ -1,0 +1,10 @@
+- IMPORTANT : To get optimal visual quality ( as displayed on the screenshots ) you will need to follow those easy steps : 
+
+1) Once the Day light or Cold Night scene is open, in the lighting settings window,  makes sure "auto generate" is checked or press the generate button manually. The default settings are made to complete the baking the fastest way possible. Please refer to the "Light bake settings" picture provided in the package to have more informations about the light baking. 
+2) Download the Post processing stack from the unity asset store for free : https://www.assetstore.unity3d.com/en/#!/content/83912
+3) Drag and drop the "Post-Processing.asset" file ( located in the FPS warehouse folder ) into the "Post processing behavious script" on the FirstPersonCamera (Pick the Cold Night for the cold night scene and vice versa )
+
+
+Note: 
+- The light baking settings are "per scene". So if you decide to drag the hangar prefab in a new scene you will have to adjust the settings according to the said image provided by myself.
+- Makes sure the project player's color space is set to liean and NOT to gamma. (In Edit->Project Settings->Player)

@@ -1,0 +1,5 @@
+Just install Post Processing Package to you project:
+
+Window/Package Manager/Post Processing
+
+You can find post processing settings in "Post Processing Profile" that included in project folder.

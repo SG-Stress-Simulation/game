@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 774a260705a6a7a43b9fcbecfcac59fe
+timeCreated: 1479370106
+licenseType: Store
+ShaderImporter:
+  defaultTextures:
+  - _node_6528: {fileID: 2800000, guid: 9e2677997077c0c4a8ae70d4b32aa44b, type: 3}
+  - _node_8607: {fileID: 2800000, guid: b893b08474b159a4baa4cc32b27874b3, type: 3}
+  - _node_836: {fileID: 2800000, guid: b42435d08453a3241959e23e23a0937f, type: 3}
+  - _node_1784: {fileID: 2800000, guid: 60a84529908d17c468b4ce2e3c322914, type: 3}
+  - _node_200: {fileID: 2800000, guid: b893b08474b159a4baa4cc32b27874b3, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

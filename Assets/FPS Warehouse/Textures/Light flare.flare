@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!121 &12100000
+Flare:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Light flare
+  m_FlareTexture: {fileID: 2800000, guid: ccdb0948000d2094a91120b8f4a7e69a, type: 3}
+  m_TextureLayout: 2
+  m_Elements:
+  - m_ImageIndex: 0
+    m_Position: 0
+    m_Size: 181.3
+    m_Color: {r: 0.11764706, g: 0.11113413, b: 0.098823525, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 0
+    m_Fade: 1
+  - m_ImageIndex: 0
+    m_Position: 0
+    m_Size: 4.2
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 0
+    m_Fade: 1
+  m_UseFog: 1

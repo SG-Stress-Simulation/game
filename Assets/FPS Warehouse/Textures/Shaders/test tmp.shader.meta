@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6dcc487adf1b31a4ba17ed2b32ed432a
+timeCreated: 1490811266
+licenseType: Store
+ShaderImporter:
+  defaultTextures:
+  - _Cubemap: {fileID: 8900000, guid: 05279d4a58a8039479777249c5885a9d, type: 3}
+  - _puddletexture: {fileID: 2800000, guid: 60a84529908d17c468b4ce2e3c322914, type: 3}
+  - _concrete: {fileID: 2800000, guid: b95196db378bec44c9aba8dfc6372dbd, type: 3}
+  - _concrete2: {fileID: 2800000, guid: 3e5801af273360e409f8aa6ef02c89b2, type: 3}
+  - _concretemask: {fileID: 2800000, guid: 9e2677997077c0c4a8ae70d4b32aa44b, type: 3}
+  - _concretedirt: {fileID: 2800000, guid: b893b08474b159a4baa4cc32b27874b3, type: 3}
+  - _puddlemask: {fileID: 2800000, guid: b42435d08453a3241959e23e23a0937f, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 5ce001bb10d351345972c31499ae3ad3
+timeCreated: 1511897351
+licenseType: Store
+ShaderImporter:
+  defaultTextures:
+  - _Cubemap: {fileID: 8900000, guid: 05279d4a58a8039479777249c5885a9d, type: 3}
+  - _Container_Diffuse: {fileID: 2800000, guid: ac2bfb48570bdd34c8761b23b3207fd9,
+      type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

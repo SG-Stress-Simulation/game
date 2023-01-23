@@ -1,0 +1,198 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cement floor
+  m_Shader: {fileID: 4800000, guid: 6dcc487adf1b31a4ba17ed2b32ed432a, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _PARALLAXMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _Concrete_Square_2k_n:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap:
+        m_Texture: {fileID: 8900000, guid: 05279d4a58a8039479777249c5885a9d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 20, y: 20}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b95196db378bec44c9aba8dfc6372dbd, type: 3}
+        m_Scale: {x: 20, y: 20}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: fcc3c7518cd21fa4492f86cfa2643b0b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: fcc3c7518cd21fa4492f86cfa2643b0b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample11:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample13:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample5:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample7:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample9:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _concrete:
+        m_Texture: {fileID: 2800000, guid: b95196db378bec44c9aba8dfc6372dbd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _concrete2:
+        m_Texture: {fileID: 2800000, guid: 3e5801af273360e409f8aa6ef02c89b2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _concretedirt:
+        m_Texture: {fileID: 2800000, guid: b893b08474b159a4baa4cc32b27874b3, type: 3}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _concretemask:
+        m_Texture: {fileID: 2800000, guid: 9e2677997077c0c4a8ae70d4b32aa44b, type: 3}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 0}
+    - _cubemap:
+        m_Texture: {fileID: 8900000, guid: 05279d4a58a8039479777249c5885a9d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_1784:
+        m_Texture: {fileID: 2800000, guid: 60a84529908d17c468b4ce2e3c322914, type: 3}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: -0.12}
+    - _node_200:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _node_6528:
+        m_Texture: {fileID: 2800000, guid: 9e2677997077c0c4a8ae70d4b32aa44b, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _node_8107:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 60, y: 60}
+        m_Offset: {x: 0, y: 0}
+    - _node_836:
+        m_Texture: {fileID: 2800000, guid: b42435d08453a3241959e23e23a0937f, type: 3}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 2.21}
+    - _node_8607:
+        m_Texture: {fileID: 2800000, guid: b893b08474b159a4baa4cc32b27874b3, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0, y: 0}
+    - _node_9125:
+        m_Texture: {fileID: 8900000, guid: 05279d4a58a8039479777249c5885a9d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_9691:
+        m_Texture: {fileID: 2800000, guid: 3e5801af273360e409f8aa6ef02c89b2, type: 3}
+        m_Scale: {x: 20, y: 20}
+        m_Offset: {x: 0, y: 0}
+    - _puddlemask:
+        m_Texture: {fileID: 2800000, guid: b42435d08453a3241959e23e23a0937f, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: -0.76, y: -1.07}
+    - _puddletexture:
+        m_Texture: {fileID: 2800000, guid: 60a84529908d17c468b4ce2e3c322914, type: 3}
+        m_Scale: {x: 20, y: 20}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Fresnelintensity: 0
+    - _Gloss: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 0
+    - _Parallax: 0.005
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    - _concretetile: 30
+    - _cubemapblurriness: 4.23
+    - _cubemappower: 0.94
+    - _mipmapblur: 0
+    - _node_368: 1
+    - _node_4450: 2.99
+    - _node_4917: 5
+    - _node_689: 5
+    - _node_9547: 10
+    - _node_9547_copy: 4.94
+    m_Colors:
+    - _Albedocolor: {r: 0.703, g: 0.703, b: 0.703, a: 0}
+    - _Color: {r: 0.765, g: 0.74778444, b: 0.690795, a: 1}
+    - _Color1: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _cubemapcolor: {r: 1, g: 1, b: 1, a: 0}
+    - _watercolor: {r: 0.128, g: 0.128, b: 0.128, a: 1}
+  m_BuildTextureStacks: []
