@@ -33,26 +33,17 @@ public class lightswitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        print("yoo");
         lightState = false;
         audio = this.GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        Debug.Log(triggerPressed.Value);
-        bool trigger = triggerPressed != null ? triggerPressed.Value : false;
-
-        /*
-        if (trigger)
-        {
-            print("yoo");
-            trigger = false;
-        }
-        */
         //bool trigger = triggerPressed != null ? triggerPressed.Value : false;
         Vector3 handPos = hand.transform.position;
 
-        if ((Input.GetKeyDown(KeyCode.L) || trigger) && collider.bounds.Contains(handPos))
+        if (Input.GetKeyDown(KeyCode.L) && collider.bounds.Contains(handPos))
         {
             if (!lightState)
             {
@@ -68,7 +59,6 @@ public class lightswitch : MonoBehaviour
                     if (i < 2) bulbs[i].GetComponent<MeshRenderer>().material = bulbOnMat;
                 }
                 lightState = true;
-                
 
                 button.transform.eulerAngles = new Vector3(
                     button.transform.eulerAngles.x,
@@ -97,7 +87,6 @@ public class lightswitch : MonoBehaviour
                    5
                );
             }
-            trigger = false;
         }
     }
 }
