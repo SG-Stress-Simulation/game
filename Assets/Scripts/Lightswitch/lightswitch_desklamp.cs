@@ -5,7 +5,8 @@ using Zinnia.Action;
 
 public class lightswitch_desklamp : MonoBehaviour
 {
-    public BooleanAction triggerPressed;
+    public BooleanAction leftTriggerPressed;
+    public BooleanAction rightTriggerPressed;
 
     public GameObject[] lightsources;
 
@@ -34,10 +35,19 @@ public class lightswitch_desklamp : MonoBehaviour
 
     void Update()
     {
-        //bool trigger = triggerPressed != null ? triggerPressed.Value : false;
+        bool leftTrigger = leftTriggerPressed != null ? leftTriggerPressed.Value : false;
+        bool rightTrigger = rightTriggerPressed != null ? rightTriggerPressed.Value : false;
+
+        bool isPressed = false;
+
+        if (leftTrigger || leftTrigger)
+        {
+            isPressed= true;
+        }
+
         Vector3 handPos = hand.transform.position;
 
-        if (Input.GetKeyDown(KeyCode.L) && collider.bounds.Contains(handPos))
+        if ((Input.GetKeyDown(KeyCode.L) || isPressed) && collider.bounds.Contains(handPos))
         {
             if (!lightState)
             {
@@ -65,6 +75,7 @@ public class lightswitch_desklamp : MonoBehaviour
                 materials[5] = bulbOffMat;
                 myRend.materials = materials;
             }
+            isPressed= false;
         }
     }
 }
