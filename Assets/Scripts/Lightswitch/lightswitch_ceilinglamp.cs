@@ -5,7 +5,8 @@ using Zinnia.Action;
 
 public class lightswitch_ceilinglamp : MonoBehaviour
 {
-    public BooleanAction triggerPressed;
+    public BooleanAction leftTriggerPressed;
+    public BooleanAction rightTriggerPressed;
 
     public GameObject[] lightsources;
     public GameObject[] lampshades;
@@ -24,27 +25,41 @@ public class lightswitch_ceilinglamp : MonoBehaviour
 
     public Collider collider;
 
-    public GameObject hand;
+    public GameObject leftHand;
+    public GameObject rightHand;
+
     public GameObject button;
 
-    private Vector3 minPosition = new Vector3(0, 0.6f, -1.7f);
-    private Vector3 maxPosition = new Vector3(0.3f, 1.3f, -1.32f);
+    public float debounceTime = 0.5f;
+    private float debounceTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        print("yoo");
         lightState = false;
         audio = this.GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        //bool trigger = triggerPressed != null ? triggerPressed.Value : false;
-        Vector3 handPos = hand.transform.position;
 
-        if (Input.GetKeyDown(KeyCode.L) && collider.bounds.Contains(handPos))
+        if (debounceTimer > 0f)
         {
+            debounceTimer -= Time.deltaTime;
+            return;
+        }
+
+        bool leftTrigger = leftTriggerPressed != null ? leftTriggerPressed.Value : false;
+        bool rightTrigger = rightTriggerPressed != null ? rightTriggerPressed.Value : false;
+
+        bool isPressedL = leftTrigger && collider.bounds.Contains(leftHand.transform.position);
+        bool isPressedR = rightTrigger && collider.bounds.Contains(rightHand.transform.position);
+        bool isPressedSim = Input.GetKeyDown(KeyCode.L) && (collider.bounds.Contains(leftHand.transform.position) || collider.bounds.Contains(rightHand.transform.position));
+
+        if (isPressedL || isPressedR || isPressedSim)
+        {
+            Debug.Log("Ceiling light switch pressed!");
+
             if (!lightState)
             {
                 audio.clip = onSound;
@@ -87,6 +102,7 @@ public class lightswitch_ceilinglamp : MonoBehaviour
                    5
                );
             }
+            debounceTimer = debounceTime;
         }
     }
 }

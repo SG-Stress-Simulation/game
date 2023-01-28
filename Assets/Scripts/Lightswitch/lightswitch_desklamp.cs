@@ -53,7 +53,7 @@ public class lightswitch_desklamp : MonoBehaviour
 
         if (isPressedL || isPressedR || isPressedSim)
         {
-            Debug.Log("Lightswitch pressed!");
+            Debug.Log("Desk light switch pressed!");
 
             if (!lightState)
             {
