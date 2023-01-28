@@ -22,8 +22,11 @@ public class lightswitch_desklamp : MonoBehaviour
 
     public Collider collider;
 
-    public GameObject hand;
+    public GameObject leftHand;
+    public GameObject rightHand;
 
+    public float debounceTime = 0.5f;
+    private float debounceTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,20 +38,23 @@ public class lightswitch_desklamp : MonoBehaviour
 
     void Update()
     {
+        if (debounceTimer > 0f)
+        {
+            debounceTimer -= Time.deltaTime;
+            return;
+        }
+
         bool leftTrigger = leftTriggerPressed != null ? leftTriggerPressed.Value : false;
         bool rightTrigger = rightTriggerPressed != null ? rightTriggerPressed.Value : false;
 
-        bool isPressed = false;
+        bool isPressedL = leftTrigger && collider.bounds.Contains(leftHand.transform.position);
+        bool isPressedR = rightTrigger && collider.bounds.Contains(rightHand.transform.position);
+        bool isPressedSim = Input.GetKeyDown(KeyCode.L) && (collider.bounds.Contains(leftHand.transform.position) || collider.bounds.Contains(rightHand.transform.position));
 
-        if (leftTrigger || leftTrigger)
+        if (isPressedL || isPressedR || isPressedSim)
         {
-            isPressed= true;
-        }
+            Debug.Log("Lightswitch pressed!");
 
-        Vector3 handPos = hand.transform.position;
-
-        if ((Input.GetKeyDown(KeyCode.L) || isPressed) && collider.bounds.Contains(handPos))
-        {
             if (!lightState)
             {
                 audio.clip = onSound;
@@ -75,7 +81,7 @@ public class lightswitch_desklamp : MonoBehaviour
                 materials[5] = bulbOffMat;
                 myRend.materials = materials;
             }
-            isPressed= false;
+            debounceTimer = debounceTime;
         }
     }
 }
