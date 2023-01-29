@@ -36,7 +36,7 @@ public class lightswitch_ceilinglamp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lightState = false;
+        lightState = true;
         audio = this.GetComponent<AudioSource>();
     }
 
