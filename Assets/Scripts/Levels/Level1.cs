@@ -3,6 +3,8 @@ using System.Collections;
 using System.IO;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine;
+using UnityEngine.Events;
+using Tilia.Interactions.Interactables.Interactables;
 using Random = UnityEngine.Random;
 
 enum EffectType
@@ -18,6 +20,14 @@ public class Level1 : MonoBehaviour
   float timeToNextEffect = Random.Range(5f, 10f);
   float timeToEffectEnd = Mathf.PI * 5;
   bool effectStarted = false;
+
+  [Header("Level End")]
+  public GameObject levelEndObject;
+
+  public GameObject outsideCollider;
+
+  public UnityEvent LevelEnd = new UnityEvent();
+
   private EffectType currentEffect = EffectType.FOVDecrease;
   
    PostProcessVolume m_Volume;
@@ -79,6 +89,24 @@ public class Level1 : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
+        // if end object is in outside collider, end level
+    if (levelEndObject != null && outsideCollider != null)
+    {
+      // levelEndObject may not be grabbed currently
+      levelEndObject.GetComponent<InteractableFacade>().Ungrabbed.AddListener((_) =>
+      {
+        if (outsideCollider.GetComponent<Collider>().bounds.Contains(levelEndObject.transform.position))
+        {
+          Debug.Log("Level 1 Ended");
+          LevelEnd.Invoke();
+        }
+      });
+    }
+
+
+
+
+
     timeToNextEffect = Random.Range(5f, 10f);
     timeToEffectEnd = Mathf.PI * 5;
       // Create an instance of a vignette
@@ -96,19 +124,19 @@ public class Level1 : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if(timeToNextEffect > 0f)  {
-      timeToNextEffect -= Time.deltaTime;
-    } else if(timeToNextEffect <= 0f && !effectStarted) {
-      StartEffect();
-      Debug.Log("Effect Started");
-    } else if(timeToEffectEnd <= 0f && effectStarted) {
-      DisableEffect();
-      Debug.Log("Effect Disabled");
-    } else {
-      UpdateEffect();
-      timeToEffectEnd -= Time.deltaTime;
-      Debug.Log("Time to effect end: " + timeToEffectEnd);
-    }
+    // if(timeToNextEffect > 0f)  {
+    //   timeToNextEffect -= Time.deltaTime;
+    // } else if(timeToNextEffect <= 0f && !effectStarted) {
+    //   StartEffect();
+    //   Debug.Log("Effect Started");
+    // } else if(timeToEffectEnd <= 0f && effectStarted) {
+    //   DisableEffect();
+    //   Debug.Log("Effect Disabled");
+    // } else {
+    //   UpdateEffect();
+    //   timeToEffectEnd -= Time.deltaTime;
+    //   Debug.Log("Time to effect end: " + timeToEffectEnd);
+    // }
   }
 
   void OnDestroy()
