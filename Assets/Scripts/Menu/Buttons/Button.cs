@@ -1,17 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Button : MonoBehaviour
 {
   [Header("General Options")]
   public bool buttonEnabled = true;
-  public bool hideButtonOnPress = true;
-  public GameObject leftMenuInteractor;
-  public GameObject rightMenuInteractor;
-  public bool disableInteractorOnPress = false;
-  public GameObject menu;
-  public bool disableMenuOnPress = false;
+  public UnityEvent onPress = new UnityEvent();
 
   [Header("Button States")]
   public GameObject normalState;
@@ -20,22 +14,9 @@ public abstract class Button : MonoBehaviour
 
   public void OnPress()
   {
-    // remove button
-    if (hideButtonOnPress)
-      gameObject.SetActive(false);
+    if (!buttonEnabled) return;
 
-    // disable interactor
-    if (disableInteractorOnPress)
-    {
-      if (leftMenuInteractor != null) leftMenuInteractor.SetActive(false);
-      if (rightMenuInteractor != null) rightMenuInteractor.SetActive(false);
-    }
-
-    // disable menu
-    if (disableMenuOnPress)
-    {
-      if (menu != null) menu.SetActive(false);
-    }
+    onPress.Invoke();    
   }
 
   public void OnHover(bool hover)

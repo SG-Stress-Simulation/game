@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.IO;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine;
 using UnityEngine.Events;
-using Tilia.Interactions.Interactables.Interactables;
 using Random = UnityEngine.Random;
 
 enum EffectType
@@ -87,20 +83,6 @@ public class Level1 : MonoBehaviour
     timeToNextEffect = Random.Range(5f, 10f);
     timeToEffectEnd = Mathf.PI * 5;
     effectStarted = false;
-    
-    // if end object is in outside collider, end level
-    if (levelEndObject != null && outsideCollider != null)
-    {
-      // levelEndObject may not be grabbed currently
-      levelEndObject.GetComponent<InteractableFacade>().Ungrabbed.AddListener((_) =>
-      {
-        if (outsideCollider.GetComponent<Collider>().bounds.Contains(levelEndObject.transform.position))
-        {
-          EndLevel();
-        }
-      });
-    }
-
     timeToNextEffect = Random.Range(5f, 10f);
     timeToEffectEnd = Mathf.PI * 5;
     // Create an instance of a vignette
@@ -118,6 +100,16 @@ public class Level1 : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    // if end object is in outside collider, end level
+    if (levelEndObject != null && outsideCollider != null)
+    {
+      if (outsideCollider.GetComponent<Collider>().bounds.Contains(levelEndObject.transform.position))
+      {
+        EndLevel();
+      }
+    }
+
+
     if(timeToNextEffect > 0f)  {
       timeToNextEffect -= Time.deltaTime;
     } else if(timeToNextEffect <= 0f && !effectStarted) {
