@@ -15,56 +15,38 @@ enum EffectType
 
 public class Level1 : MonoBehaviour
 {
-  public float animationDistance = 3f;
-  public float animationDuration = 2f;
-  float timeToNextEffect = Random.Range(5f, 10f);
-  float timeToEffectEnd = Mathf.PI * 5;
-  bool effectStarted = false;
+  private float timeToNextEffect;
+  private float timeToEffectEnd;
+  private bool effectStarted;
 
   [Header("Level End")]
   public GameObject levelEndObject;
 
   public GameObject outsideCollider;
 
-  public UnityEvent LevelEnd = new UnityEvent();
+  public UnityEvent levelEnd = new UnityEvent();
+  
+  [Header("Level Start")]
+  public UnityEvent levelStart = new UnityEvent();
 
   private EffectType currentEffect = EffectType.FOVDecrease;
   
-   PostProcessVolume m_Volume;
-   Vignette m_Vignette;
-   ColorGrading m_ColorGrading;
-  
-  private IEnumerator AnimateLevelStart()
-  {
-    float deltaPos = animationDistance / animationDuration;
-    float time = 0f;
-    while (time < animationDuration)
-    {
-      transform.position += new Vector3(0f, deltaPos * Time.deltaTime, 0f);
-      time += Time.deltaTime;
-      yield return null;
-    }
-  }
+  PostProcessVolume m_Volume;
+  Vignette m_Vignette;
+  ColorGrading m_ColorGrading;
 
   public void StartLevel()
   {
     Debug.Log("Level 1 Started");
-    // animate moving game object up
-    StartCoroutine(AnimateLevelStart());
+    levelStart.Invoke();
+  }
+
+  public void EndLevel()
+  {
+    Debug.Log("Level 1 Ended");
+    levelEnd.Invoke();
   }
   
-  void UpdateEffect()
-  {
-    switch (currentEffect)
-    {
-      case EffectType.FOVDecrease:
-        m_Vignette.intensity.Override( Mathf.Sin(timeToEffectEnd / 5) * 0.5f + (Mathf.Sin(Time.realtimeSinceStartup)) * 0.2f);
-        break;
-      case EffectType.ColorLoss:
-        m_ColorGrading.saturation.Override(Mathf.Sin(timeToEffectEnd / 5));
-        break;
-    }
-  }
   
   void DisableEffect()
   {
@@ -86,10 +68,27 @@ public class Level1 : MonoBehaviour
     effectStarted = true;
   }
 
+  void UpdateEffect()
+  {
+    switch (currentEffect)
+    {
+      case EffectType.FOVDecrease:
+        m_Vignette.intensity.Override( Mathf.Sin(timeToEffectEnd / 5) * 0.5f + (Mathf.Sin(Time.realtimeSinceStartup)) * 0.2f);
+        break;
+      case EffectType.ColorLoss:
+        m_ColorGrading.saturation.Override(Mathf.Sin(timeToEffectEnd / 5));
+        break;
+    }
+  }
+  
   // Start is called before the first frame update
   void Start()
   {
-        // if end object is in outside collider, end level
+    timeToNextEffect = Random.Range(5f, 10f);
+    timeToEffectEnd = Mathf.PI * 5;
+    effectStarted = false;
+    
+    // if end object is in outside collider, end level
     if (levelEndObject != null && outsideCollider != null)
     {
       // levelEndObject may not be grabbed currently
@@ -97,46 +96,41 @@ public class Level1 : MonoBehaviour
       {
         if (outsideCollider.GetComponent<Collider>().bounds.Contains(levelEndObject.transform.position))
         {
-          Debug.Log("Level 1 Ended");
-          LevelEnd.Invoke();
+          EndLevel();
         }
       });
     }
 
-
-
-
-
     timeToNextEffect = Random.Range(5f, 10f);
     timeToEffectEnd = Mathf.PI * 5;
-      // Create an instance of a vignette
-       m_Vignette = ScriptableObject.CreateInstance<Vignette>();
-       m_Vignette.enabled.Override(true);
+    // Create an instance of a vignette
+    m_Vignette = ScriptableObject.CreateInstance<Vignette>();
+    m_Vignette.enabled.Override(true);
        
-// Create an instance of a color grading
-        m_ColorGrading = ScriptableObject.CreateInstance<ColorGrading>();
-        m_ColorGrading.enabled.Override(true);
-        
-        // Create a volume and add the post processing effect to it
-        m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_Vignette, m_ColorGrading);
+    // Create an instance of a color grading
+    m_ColorGrading = ScriptableObject.CreateInstance<ColorGrading>();
+    m_ColorGrading.enabled.Override(true);
+    
+    // Create a volume and add the post processing effect to it
+    m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_Vignette, m_ColorGrading);
   }
 
   // Update is called once per frame
   void Update()
   {
-    // if(timeToNextEffect > 0f)  {
-    //   timeToNextEffect -= Time.deltaTime;
-    // } else if(timeToNextEffect <= 0f && !effectStarted) {
-    //   StartEffect();
-    //   Debug.Log("Effect Started");
-    // } else if(timeToEffectEnd <= 0f && effectStarted) {
-    //   DisableEffect();
-    //   Debug.Log("Effect Disabled");
-    // } else {
-    //   UpdateEffect();
-    //   timeToEffectEnd -= Time.deltaTime;
-    //   Debug.Log("Time to effect end: " + timeToEffectEnd);
-    // }
+    if(timeToNextEffect > 0f)  {
+      timeToNextEffect -= Time.deltaTime;
+    } else if(timeToNextEffect <= 0f && !effectStarted) {
+      StartEffect();
+      //Debug.Log("Effect Started");
+    } else if(timeToEffectEnd <= 0f && effectStarted) {
+      DisableEffect();
+      //Debug.Log("Effect Disabled");
+    } else {
+      UpdateEffect();
+      timeToEffectEnd -= Time.deltaTime;
+      //Debug.Log("Time to effect end: " + timeToEffectEnd);
+    }
   }
 
   void OnDestroy()
