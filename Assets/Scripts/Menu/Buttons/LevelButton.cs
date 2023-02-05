@@ -15,7 +15,7 @@ public class LevelButton : Button
 
     Debug.Log("Level Button Pressed");
 
-    level.SendMessage("StartLevel");
+    level.SetActive(true);
   }
 
   // Start is called before the first frame update
