@@ -72,7 +72,7 @@ public class radio : MonoBehaviour
                     button.transform.eulerAngles.z
                 );
             }
-
+            debounceTimer = debounceTime;
         }
     }
 }
