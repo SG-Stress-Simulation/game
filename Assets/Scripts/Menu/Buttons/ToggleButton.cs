@@ -1,58 +1,75 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class ToggleButton : MonoBehaviour
+public class ToggleButton : MonoBehaviour
 {
   [Header("General Options")]
-  public UnityEvent onToggle1 = new UnityEvent();
-  public UnityEvent onToggle2 = new UnityEvent();
+  public UnityEvent onToggle = new UnityEvent();
+  public UnityEvent onToggleOff = new UnityEvent();
+  public UnityEvent onToggleOn = new UnityEvent();
 
   public bool initialIsToggled = false;
 
   [Header("Button States")]
-  public GameObject normalState1;
-  public GameObject hoverState1;
-  public GameObject normalState2;
-  public GameObject hoverState2;
+  public GameObject normalStateOn;
+  public GameObject hoverStateOn;
+  public GameObject normalStateOff;
+  public GameObject hoverStateOff;
 
   private bool isToggled = false;
 
+  protected virtual void ToggleOn()
+  {
+    isToggled = true;
+    normalStateOff.SetActive(false);
+    hoverStateOff.SetActive(false);
+    normalStateOn.SetActive(true);
+    hoverStateOn.SetActive(false);
+  }
+
+  protected virtual void ToggleOff()
+  {
+    isToggled = false;
+    normalStateOff.SetActive(true);
+    hoverStateOff.SetActive(false);
+    normalStateOn.SetActive(false);
+    hoverStateOn.SetActive(false);
+  }
+
   public void OnPress()
   {
+    onToggle.Invoke();
     if (isToggled)
     {
-      onToggle1.Invoke();
+      onToggleOff.Invoke();
+      ToggleOff();
     }
     else
     {
-      onToggle2.Invoke();
+      onToggleOn.Invoke();
+      ToggleOn();
     }
-
-    isToggled = !isToggled;
   }
 
   public void OnHover(bool hover)
   {
     if (isToggled)
     {
-      normalState1.SetActive(!hover);
-      hoverState1.SetActive(hover);
+      normalStateOn.SetActive(!hover);
+      hoverStateOn.SetActive(hover);
     }
     else
     {
-      normalState2.SetActive(!hover);
-      hoverState2.SetActive(hover);
+      normalStateOff.SetActive(!hover);
+      hoverStateOff.SetActive(hover);
     }
   }
 
   // Start is called before the first frame update
   protected void Start() { 
-    normalState1.SetActive(!initialIsToggled);
-    hoverState1.SetActive(false);
-    normalState2.SetActive(initialIsToggled);
-    hoverState2.SetActive(false);
+    normalStateOff.SetActive(!initialIsToggled);
+    hoverStateOff.SetActive(false);
+    normalStateOn.SetActive(initialIsToggled);
+    hoverStateOn.SetActive(false);
   }
-
-  // Update is called once per frame
-  abstract public void Update();
 }

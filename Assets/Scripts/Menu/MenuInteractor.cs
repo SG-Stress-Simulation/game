@@ -21,6 +21,8 @@ public class MenuInteractor : MonoBehaviour
 
   float lastActiveTime;
 
+  bool wasPressed = false;
+
   void Start()
   {
     rend = gameObject.GetComponent<LineRenderer>();
@@ -76,7 +78,7 @@ public class MenuInteractor : MonoBehaviour
 
       bool trigger = triggerPressed != null ? triggerPressed.Value : false;
 
-      if (trigger)
+      if (trigger && !wasPressed)
       { 
         ButtonPress(comp);
       } 
@@ -84,6 +86,8 @@ public class MenuInteractor : MonoBehaviour
       {
         ButtonHover(comp);
       }
+
+      wasPressed = trigger;
     }
     else
     {
