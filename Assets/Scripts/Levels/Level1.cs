@@ -4,8 +4,6 @@ using UnityEngine.Events;
 public class Level1 : MonoBehaviour
 {
   [Header("Level End")]
-  public GameObject levelEndObject;
-  public GameObject outsideCollider;
   public UnityEvent levelEnd = new UnityEvent();
   public UnityEvent levelEndPostAnimation = new UnityEvent();
   
@@ -25,6 +23,7 @@ public class Level1 : MonoBehaviour
   {
     Debug.Log("Level 1 Ended");
     levelEnd.Invoke();
+    Invoke("levelEndPostAnimationEvent", 3f);
   }
 
   public void StartingSequenceComplete()
@@ -62,14 +61,6 @@ public class Level1 : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    // if end object is in outside collider, end level
-    if (levelEndObject != null && outsideCollider != null)
-    {
-      if (outsideCollider.GetComponent<Collider>().bounds.Contains(levelEndObject.transform.position))
-      {
-        EndLevel();
-        Invoke("levelEndPostAnimationEvent", 3f);
-      }
-    }
+    
   }
 }
