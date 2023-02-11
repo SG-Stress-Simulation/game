@@ -40,7 +40,7 @@ public class MenuInteractor : MonoBehaviour
   {
     if (hovered != null)
     {
-      hovered.SendMessage("OnHover", false);
+      hovered.SendMessage("OnHover", false, SendMessageOptions.DontRequireReceiver);
     }
     
     if (comp == null)
@@ -48,7 +48,7 @@ public class MenuInteractor : MonoBehaviour
 
     hovered = comp;
 
-    comp.SendMessage("OnHover", true);
+    comp.SendMessage("OnHover", true, SendMessageOptions.DontRequireReceiver);
   }
 
   public void ButtonPress(GameObject comp)
@@ -56,7 +56,7 @@ public class MenuInteractor : MonoBehaviour
     if (comp == null)
       return;
 
-    comp.SendMessage("OnPress");
+    comp.SendMessage("OnPress", SendMessageOptions.DontRequireReceiver);
   }
 
   public void AlignLineRenderer(LineRenderer rend)

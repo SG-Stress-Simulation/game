@@ -23,12 +23,11 @@ public class Level1 : MonoBehaviour
   {
     Debug.Log("Level 1 Ended");
     levelEnd.Invoke();
-    Invoke("levelEndPostAnimationEvent", 3f);
+    Invoke("levelEndPostAnimationEvent", 5f);
   }
 
   public void StartingSequenceComplete()
   {
-    print("Tween Complete");
     collisionForcer.SetActive(false);
     onStarted.Invoke();
   }
@@ -44,7 +43,7 @@ public class Level1 : MonoBehaviour
     collisionForcer.SetActive(true);
 
     Invoke("MoveScene", 0.2f);
-    Invoke("StartingSequenceComplete", .7f);
+    Invoke("StartingSequenceComplete", 1f);
   }
   
   // Start is called before the first frame update

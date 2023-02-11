@@ -6,11 +6,10 @@ using UnityEngine.XR;
 
 public class PlayAreaIndicator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Debug.Log("PlayAreaIndicator Start");
+    private int _counter = 0;
 
+    private void LoadBoundary()
+    {
         List<Vector3> boundaryPoints = new List<Vector3>();
 
         List<XRInputSubsystem> lst = new List<XRInputSubsystem>();
@@ -21,20 +20,19 @@ public class PlayAreaIndicator : MonoBehaviour
             bool v = lst[i].TryGetBoundaryPoints(boundaryPoints);
             if (v) {
                 found = true;
-                // Debug.Log("Boundary found");
                 break;
             };
         }
 
         if (!found) {
-            // Debug.Log("No boundary found");
             return;
         }
 
-        // shift the boundary points 0.05m up
         for (int i = 0; i < boundaryPoints.Count; i++) {
             boundaryPoints[i] += new Vector3(0, 0.05f, 0);
         }
+
+        _counter = boundaryPoints.Count;
 
         LineRenderer lineRenderer = GetComponent<LineRenderer>();
 
@@ -54,10 +52,19 @@ public class PlayAreaIndicator : MonoBehaviour
 
         lineRenderer.enabled = true;
     }
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        LoadBoundary();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // try to load boundary when it is not loaded (required if game is started before headset is connected)
+        if (_counter == 0) {
+            LoadBoundary();
+        }
     }
 }
