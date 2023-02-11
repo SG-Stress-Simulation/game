@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class Button : MonoBehaviour
+public class Button : MonoBehaviour 
 {
   [Header("General Options")]
   public bool buttonEnabled = true;
@@ -16,7 +16,8 @@ public abstract class Button : MonoBehaviour
   {
     if (!buttonEnabled) return;
 
-    onPress.Invoke();    
+    onPress.Invoke();
+    OnHover(false);
   }
 
   public void OnHover(bool hover)
@@ -33,7 +34,4 @@ public abstract class Button : MonoBehaviour
     hoverState.SetActive(false);
     deactivatedState.SetActive(!buttonEnabled);
   }
-
-  // Update is called once per frame
-  abstract public void Update();
 }

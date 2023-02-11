@@ -23,10 +23,4 @@ public class LevelButton : Button
   {
     base.Start();
   }
-
-  // Update is called once per frame
-  public override void Update()
-  {
-
-  }
 }
