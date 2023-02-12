@@ -72,9 +72,11 @@ public class MenuInteractor : MonoBehaviour
     if (Physics.Raycast(ray, out hit, 100, layerMask.value))
     {
       points[1] = hit.point;
-      rend.material.color = Color.green;
-
       GameObject comp = hit.collider.gameObject;
+      Button btn = comp.GetComponent<Button>();
+
+      if (btn == null || btn.buttonEnabled == true)
+        rend.material.color = Color.green;
 
       bool trigger = triggerPressed != null ? triggerPressed.Value : false;
 
@@ -92,7 +94,7 @@ public class MenuInteractor : MonoBehaviour
     else
     {
       points[1] = ray.GetPoint(20);
-      rend.material.color = Color.red;
+      rend.material.color = Color.gray;
 
       ButtonHover(null);
     }
