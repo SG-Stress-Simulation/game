@@ -12,6 +12,7 @@ public class lightswitch_ceilinglamp : MonoBehaviour
     public GameObject[] lampshades;
     public GameObject[] bulbs;
 
+    public bool initialState;
     private bool lightState;
 
     public AudioClip onSound;
@@ -36,8 +37,8 @@ public class lightswitch_ceilinglamp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lightState = true;
         audio = this.GetComponent<AudioSource>();
+        lightState = initialState;
     }
 
     void Update()
@@ -71,7 +72,11 @@ public class lightswitch_ceilinglamp : MonoBehaviour
                 for (int i = 0; i < lampshades.Length; i++)
                 {
                     lampshades[i].GetComponent<MeshRenderer>().material = shadeOnMat;
-                    if (i < 2) bulbs[i].GetComponent<MeshRenderer>().material = bulbOnMat;
+                    
+                }
+                foreach (GameObject x in bulbs)
+                {
+                    x.GetComponent<MeshRenderer>().material = bulbOnMat;
                 }
                 lightState = true;
 
