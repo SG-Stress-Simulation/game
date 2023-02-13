@@ -10,6 +10,7 @@
   ],
   "dependencies": {
     "com.unity.collab-proxy": "1.17.7",
+    "com.unity.collections": "1.2.4",
     "com.unity.editorcoroutines": "1.0.0",
     "com.unity.formats.fbx": "4.1.2",
     "com.unity.ide.rider": "3.0.18",
@@ -17,6 +18,8 @@
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.postprocessing": "3.2.2",
     "com.unity.probuilder": "5.0.6",
+    "com.unity.render-pipelines.core": "12.1.8",
+    "com.unity.render-pipelines.high-definition": "12.1.8",
     "com.unity.test-framework": "1.1.31",
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
