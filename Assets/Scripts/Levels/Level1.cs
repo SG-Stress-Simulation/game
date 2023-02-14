@@ -1,18 +1,16 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Level1 : MonoBehaviour
 {
-  [Header("Level End")]
-  public UnityEvent levelEnd = new UnityEvent();
-  public UnityEvent levelEndPostAnimation = new UnityEvent();
-  
   [Header("Level Start")]
   [Tooltip("The event to trigger when the level moved to the center of the play area")]
-  public UnityEvent beforeStart = new UnityEvent();
-  public UnityEvent onStarted = new UnityEvent();
-  public GameObject collisionForcer;
-  public GameObject scene;
+  public UnityEvent onRoomEnter = new UnityEvent();
+  public UnityEvent onRoomEntered = new UnityEvent();
+  public GuidReference collisionForcer;
+  public Animator scene;
+  public GuidReference menu;
 
   public void OnEnable()
   {
@@ -22,44 +20,34 @@ public class Level1 : MonoBehaviour
   public void EndLevel()
   {
     Debug.Log("Level 1 Ended");
-    levelEnd.Invoke();
+    scene.SetTrigger("Downwards");
     Invoke("levelEndPostAnimationEvent", 5f);
   }
 
   public void StartingSequenceComplete()
   {
-    collisionForcer.SetActive(false);
-    onStarted.Invoke();
+    collisionForcer.gameObject.SetActive(false);
+    onRoomEntered.Invoke();
   }
 
   public void MoveScene()
   {
-    scene.GetComponent<Animator>().Play("SidewaysAnim", 0);
+    scene.Play("SidewaysAnim", 0);
   }
 
   public void EnterRoom()
   {
-    beforeStart.Invoke();
-    collisionForcer.SetActive(true);
+    onRoomEnter.Invoke();
+    collisionForcer.gameObject.SetActive(true);
 
     Invoke("MoveScene", 0.2f);
     Invoke("StartingSequenceComplete", 1f);
   }
-  
-  // Start is called before the first frame update
-  void Start()
-  {
-    
-  }
 
   public void levelEndPostAnimationEvent()
   {
-    levelEndPostAnimation.Invoke();
-  }
-
-  // Update is called once per frame
-  void Update()
-  {
-    
+    SceneManager.UnloadSceneAsync("Level 1");
+    menu.gameObject.SetActive(true);
+    menu.gameObject.SendMessage("Enable");
   }
 }

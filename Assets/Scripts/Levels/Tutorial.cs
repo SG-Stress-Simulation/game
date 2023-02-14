@@ -1,15 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
-  [Header("Level End")]
-  public UnityEvent levelEnd = new UnityEvent();
-  public UnityEvent levelEndPostAnimation = new UnityEvent();
-  
-  [Header("Level Start")]
-  [Tooltip("The event to trigger when the level moved to the center of the play area")]
   public Animator scene;
+  public GuidReference menu;
 
   public void OnEnable()
   {
@@ -20,24 +16,16 @@ public class Tutorial : MonoBehaviour
   public void EndLevel()
   {
     Debug.Log("Tutorial Ended");
-    levelEnd.Invoke();
+    scene.SetTrigger("Downwards");
     Invoke("levelEndPostAnimationEvent", 3f);
-  }
-  
-  // Start is called before the first frame update
-  void Start()
-  {
-    
   }
 
   public void levelEndPostAnimationEvent()
   {
-    levelEndPostAnimation.Invoke();
-  }
-
-  // Update is called once per frame
-  void Update()
-  {
-    
+    if (menu != null) {
+      SceneManager.UnloadSceneAsync("Tutorial");
+      menu.gameObject.SetActive(true);
+      menu.gameObject.SendMessage("Enable");
+    }
   }
 }

@@ -1,38 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zinnia.Action;
 
 public class lightswitch_desklamp : MonoBehaviour
 {
+    private bool lightState;
+    private MeshRenderer myRend;
+
+    [Header("Interactors")]
     public BooleanAction leftTriggerPressed;
     public BooleanAction rightTriggerPressed;
+    public GuidReference leftHand;
+    public GuidReference rightHand;
 
-    public GameObject[] lightsources;
+    [Header("Lights")]
+    public GameObject[] lightSources;
 
-    private bool lightState;
-
+    [Header("On State")]
     public AudioClip onSound;
-    public AudioClip offSound;
-    private AudioSource audio;
-
     public Material bulbOnMat;
+
+    [Header("Off State")]
+    public AudioClip offSound;
     public Material bulbOffMat;
-    public MeshRenderer myRend;
-
-    public Collider collider;
-
-    public GameObject leftHand;
-    public GameObject rightHand;
-
+    
+    [Header("Debounce")]
     public float debounceTime = 0.5f;
     private float debounceTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        lightState = lightsources[0].GetComponent<Light>().isActiveAndEnabled;
-        audio = this.GetComponent<AudioSource>();
+        lightState = lightSources[0].GetComponent<Light>().isActiveAndEnabled;
         myRend = this.GetComponent<MeshRenderer>();
     }
 
@@ -47,9 +45,9 @@ public class lightswitch_desklamp : MonoBehaviour
         bool leftTrigger = leftTriggerPressed != null ? leftTriggerPressed.Value : false;
         bool rightTrigger = rightTriggerPressed != null ? rightTriggerPressed.Value : false;
 
-        bool isPressedL = leftTrigger && collider.bounds.Contains(leftHand.transform.position);
-        bool isPressedR = rightTrigger && collider.bounds.Contains(rightHand.transform.position);
-        bool isPressedSim = Input.GetKeyDown(KeyCode.L) && (collider.bounds.Contains(leftHand.transform.position) || collider.bounds.Contains(rightHand.transform.position));
+        bool isPressedL = leftTrigger && GetComponent<Collider>().bounds.Contains(leftHand.gameObject.transform.position);
+        bool isPressedR = rightTrigger && GetComponent<Collider>().bounds.Contains(rightHand.gameObject.transform.position);
+        bool isPressedSim = Input.GetKeyDown(KeyCode.L) && (GetComponent<Collider>().bounds.Contains(leftHand.gameObject.transform.position) || GetComponent<Collider>().bounds.Contains(rightHand.gameObject.transform.position));
 
         if (isPressedL || isPressedR || isPressedSim)
         {
@@ -57,9 +55,9 @@ public class lightswitch_desklamp : MonoBehaviour
 
             if (!lightState)
             {
-                audio.clip = onSound;
-                audio.Play();
-                foreach (GameObject x in lightsources)
+                GetComponent<AudioSource>().clip = onSound;
+                GetComponent<AudioSource>().Play();
+                foreach (GameObject x in lightSources)
                 {
                     x.GetComponent<Light>().enabled = true;
                 }
@@ -70,9 +68,9 @@ public class lightswitch_desklamp : MonoBehaviour
             }
             else
             {
-                audio.clip = offSound;
-                audio.Play();
-                foreach (GameObject x in lightsources)
+                GetComponent<AudioSource>().clip = offSound;
+                GetComponent<AudioSource>().Play();
+                foreach (GameObject x in lightSources)
                 {
                     x.GetComponent<Light>().enabled = false;
                 }

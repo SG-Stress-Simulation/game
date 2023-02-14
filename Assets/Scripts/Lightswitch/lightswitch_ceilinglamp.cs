@@ -5,40 +5,40 @@ using Zinnia.Action;
 
 public class lightswitch_ceilinglamp : MonoBehaviour
 {
+    private bool lightState;
+
+    [Header("Interactors")]
     public BooleanAction leftTriggerPressed;
     public BooleanAction rightTriggerPressed;
+    public GuidReference leftHand;
+    public GuidReference rightHand;
 
-    public GameObject[] lightsources;
+    [Header("Lights")]
+    public GameObject[] lightSources;
     public GameObject[] lampshades;
     public GameObject[] bulbs;
 
-    public bool initialState;
-    private bool lightState;
-
+    [Header("On State")]
     public AudioClip onSound;
-    public AudioClip offSound;
-    private AudioSource audio;
-
     public Material bulbOnMat;
-    public Material bulbOffMat;
     public Material shadeOnMat;
+
+    [Header("Off State")]
+    public AudioClip offSound;
+    public Material bulbOffMat;
     public Material shadeOffMat;
 
-    public Collider collider;
-
-    public GameObject leftHand;
-    public GameObject rightHand;
-
+    [Header("Button")]
     public GameObject button;
 
+    [Header("Debounce")]
     public float debounceTime = 0.5f;
     private float debounceTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        audio = this.GetComponent<AudioSource>();
-        lightState = initialState;
+        lightState = lightSources[0].GetComponent<Light>().isActiveAndEnabled;
     }
 
     void Update()
@@ -53,9 +53,9 @@ public class lightswitch_ceilinglamp : MonoBehaviour
         bool leftTrigger = leftTriggerPressed != null ? leftTriggerPressed.Value : false;
         bool rightTrigger = rightTriggerPressed != null ? rightTriggerPressed.Value : false;
 
-        bool isPressedL = leftTrigger && collider.bounds.Contains(leftHand.transform.position);
-        bool isPressedR = rightTrigger && collider.bounds.Contains(rightHand.transform.position);
-        bool isPressedSim = Input.GetKeyDown(KeyCode.L) && (collider.bounds.Contains(leftHand.transform.position) || collider.bounds.Contains(rightHand.transform.position));
+        bool isPressedL = leftTrigger && GetComponent<Collider>().bounds.Contains(leftHand.gameObject.transform.position);
+        bool isPressedR = rightTrigger && GetComponent<Collider>().bounds.Contains(rightHand.gameObject.transform.position);
+        bool isPressedSim = Input.GetKeyDown(KeyCode.L) && (GetComponent<Collider>().bounds.Contains(leftHand.gameObject.transform.position) || GetComponent<Collider>().bounds.Contains(rightHand.gameObject.transform.position));
 
         if (isPressedL || isPressedR || isPressedSim)
         {
@@ -63,9 +63,9 @@ public class lightswitch_ceilinglamp : MonoBehaviour
 
             if (!lightState)
             {
-                audio.clip = onSound;
-                audio.Play();
-                foreach (GameObject x in lightsources)
+                GetComponent<AudioSource>().clip = onSound;
+                GetComponent<AudioSource>().Play();
+                foreach (GameObject x in lightSources)
                 {
                     x.GetComponent<Light>().enabled = true;
                 }
@@ -88,9 +88,9 @@ public class lightswitch_ceilinglamp : MonoBehaviour
             }
             else
             {
-                audio.clip = offSound;
-                audio.Play();
-                foreach (GameObject x in lightsources)
+                GetComponent<AudioSource>().clip = offSound;
+                GetComponent<AudioSource>().Play();
+                foreach (GameObject x in lightSources)
                 {
                     x.GetComponent<Light>().enabled = false;
                 }
@@ -111,44 +111,4 @@ public class lightswitch_ceilinglamp : MonoBehaviour
         }
     }
 }
-    
-
-    /*
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.L) || switcher)
-        {
-            if (!lightState)
-            {
-                audio.clip = onSound;
-                audio.Play();
-                foreach(GameObject x in lightsources)
-                {
-                    x.GetComponent<Light>().enabled = true;
-                }
-                for(int i=0; i < lampshades.Length; i++)
-                {
-                    lampshades[i].GetComponent<MeshRenderer>().material = shadeOnMat;
-                    if(i < 2) bulbs[i].GetComponent<MeshRenderer>().material = bulbOnMat;
-                }
-                lightState = true;
-            } else
-            {
-                audio.clip = offSound;
-                audio.Play();
-                foreach (GameObject x in lightsources)
-                {
-                    x.GetComponent<Light>().enabled = false;
-                }
-                for (int i = 0; i < lampshades.Length; i++)
-                {
-                    lampshades[i].GetComponent<MeshRenderer>().material = shadeOffMat;
-                    if (i < 2) bulbs[i].GetComponent<MeshRenderer>().material = bulbOffMat;
-                }
-                lightState = false;
-            }
-        }
-    }*/
 

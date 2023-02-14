@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelButton : Button
 {
-  [Header("Level Button Options")]
-  public GameObject level;
+  [Header("Level Scene Reference")]
+  public string scene;
 
   new public void OnPress()
   {
@@ -15,7 +16,7 @@ public class LevelButton : Button
 
     Debug.Log("Level Button Pressed");
 
-    level.SetActive(true);
+    SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
   }
 
   // Start is called before the first frame update

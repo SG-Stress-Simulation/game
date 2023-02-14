@@ -1,31 +1,31 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Level2 : MonoBehaviour
 {
-    [Header("Level End")]
-    public UnityEvent levelEnd = new UnityEvent();
-    public UnityEvent levelEndPostAnimation = new UnityEvent();
-  
-    [Header("Level Start")]
-    [Tooltip("The event to trigger when the level starts")]
-    public UnityEvent onStart = new UnityEvent();
+    public Animator scene;
+    public GuidReference menu;
 
     public void OnEnable()
     {
         Debug.Log("Level 2 Started");
+        scene.SetTrigger("Upwards");
     }
 
     public void EndLevel()
     {
         Debug.Log("Level 2 Ended");
-        levelEnd.Invoke();
+        scene.SetTrigger("Downwards");
         Invoke("levelEndPostAnimationEvent", 5f);
     }
 
     public void levelEndPostAnimationEvent()
     {
-        levelEndPostAnimation.Invoke();
+        if (menu != null) {
+            SceneManager.UnloadSceneAsync("Level 2");
+            menu.gameObject.SetActive(true);
+            menu.gameObject.SendMessage("Enable");
+        }
     }
 }
