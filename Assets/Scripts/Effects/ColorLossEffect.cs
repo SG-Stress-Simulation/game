@@ -7,12 +7,18 @@ namespace Zinnia.Action.Effects
     {
         ColorGrading m_CG;
         
-        public void StopEffect()
+        public override void StopEffect()
         {
             base.StopEffect();
             m_CG.saturation.Override(0f);
         }
-        
+
+        public override void StartEffect()
+        {
+            base.StartEffect();
+            
+        }
+
         public void Start()
         {
             base.Start();
