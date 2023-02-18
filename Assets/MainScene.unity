@@ -496,6 +496,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33820638}
   m_CullTransparentMesh: 1
+--- !u!1 &40426923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40426924}
+  - component: {fileID: 40426925}
+  - component: {fileID: 40426926}
+  m_Layer: 0
+  m_Name: HTTPController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &40426924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40426923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771097589}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &40426925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40426923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ec54fd3e7a357c3a5214f1e90eefe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 5555
+  SaveFolder: 
+  UseStreamingAssetsPath: 1
+  bufferSize: 16
+  controller: {fileID: 40426926}
+--- !u!114 &40426926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40426923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eea5ea54d875ca24ac654b5347871ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorLossEffect: {fileID: 1967446699}
+  vignetteEffect: {fileID: 1979109841}
+  dofEffect: {fileID: 1827453341}
 --- !u!1 &63520857
 GameObject:
   m_ObjectHideFlags: 0
@@ -11083,6 +11148,7 @@ Transform:
   - {fileID: 1827453340}
   - {fileID: 1531568370}
   - {fileID: 2110449243}
+  - {fileID: 40426924}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13654,7 +13720,7 @@ GameObject:
   - component: {fileID: 2110449243}
   - component: {fileID: 2110449244}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: KBDController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
