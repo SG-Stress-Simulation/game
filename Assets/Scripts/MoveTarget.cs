@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class MoveTarget : MonoBehaviour
 {
 
-  public GameObject player;
+  public GuidReference player;
   public GameObject target;
   public UnityEvent onSuccess = new UnityEvent();
 
@@ -20,7 +20,7 @@ public class MoveTarget : MonoBehaviour
         // if player in target hitbox
         if (player != null && target != null)
         {
-          if (target.GetComponent<Collider>().bounds.Contains(player.transform.position))
+          if (target.GetComponent<Collider>().bounds.Contains(player.gameObject.transform.position))
           {
             // trigger success event
             onSuccess.Invoke();
