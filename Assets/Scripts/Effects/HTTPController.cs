@@ -30,11 +30,21 @@ public class HTTPController : MonoBehaviour
         nextEffect = NextEffect.DOF;
         return StandardResult("DOF");
     }
-    
+
     public ReturnResult StartColorLoss()
     {
         nextEffect = NextEffect.COLOR_LOSS;
         return StandardResult("COLOR LOSS");
+    }
+    
+    public ReturnResult Health()
+    {
+        ReturnResult result = new ReturnResult
+        {
+            code = 200,
+            msg = "up"
+        };
+        return result;
     }
 
     private ReturnResult StandardResult(string effectName)
