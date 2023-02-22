@@ -18,12 +18,14 @@ public class BaseEffect : MonoBehaviour
 
     public virtual void StartEffect()
     {
+        Debug.Log("Started Effect");
         timeToEffectEnd = Random.Range(timeToEffectEndMin, timeToEffectEndMax) * Mathf.PI;
         effectRunning = true;
     }
     
     public virtual void StopEffect()
     {
+        Debug.Log("Stopped Effect");
         effectRunning = false;
     }
     
@@ -39,9 +41,9 @@ public class BaseEffect : MonoBehaviour
     public virtual void Update()
     {
         if(test) effectRunning = true;
-            if (timeToEffectEnd <= 0 && !test) StopEffect();
-            if (timeToEffectEnd <= 0 && test) timeToEffectEnd = Random.Range(timeToEffectEndMin, timeToEffectEndMax);
-            timeToEffectEnd -= Time.deltaTime;
+        if (timeToEffectEnd <= 0 && !test && effectRunning) StopEffect();
+        if (timeToEffectEnd <= 0 && test) timeToEffectEnd = Random.Range(timeToEffectEndMin, timeToEffectEndMax);
+        timeToEffectEnd -= Time.deltaTime;
     }
     
     void OnDestroy()
