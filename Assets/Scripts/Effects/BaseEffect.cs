@@ -9,6 +9,8 @@ public class BaseEffect : MonoBehaviour
     public int timeToEffectEndMax = 5;
     [HideInInspector]
     public float timeToEffectEnd;
+    [HideInInspector]
+    public float duration = 0.0f;
     public bool test = false;
     [HideInInspector]
     public bool effectRunning = false;
@@ -20,7 +22,9 @@ public class BaseEffect : MonoBehaviour
     {
         Debug.Log("Started Effect");
         timeToEffectEnd = Random.Range(timeToEffectEndMin, timeToEffectEndMax) * Mathf.PI;
+        duration = timeToEffectEnd;
         effectRunning = true;
+        Debug.Log("Duration " + duration);
     }
     
     public virtual void StopEffect()

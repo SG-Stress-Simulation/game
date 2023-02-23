@@ -6,7 +6,6 @@ namespace Zinnia.Action.Effects
     public class VignetteEffect : BaseEffect
     {
         Vignette m_Vignette;
-        private float runningTime;
         
         public override void StopEffect()
         {
@@ -30,10 +29,10 @@ namespace Zinnia.Action.Effects
 
         public void Update()
         {
-            runningTime *= Time.deltaTime;
             if (effectRunning)
             {
-                m_Vignette.intensity.Override(Mathf.Sin(timeToEffectEnd / 5));
+                m_Vignette.intensity.Override(
+                    Mathf.Sin((timeToEffectEnd /duration) * Mathf.PI));
             }
             base.Update();
         }

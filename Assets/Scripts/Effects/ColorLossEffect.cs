@@ -31,7 +31,9 @@ namespace Zinnia.Action.Effects
         {
             if (effectRunning)
             {
-                m_CG.saturation.Override(Mathf.Lerp(m_CG.saturation.value, 1f, Time.deltaTime * 2f));
+                m_CG.saturation.Override(
+                    (Mathf.Sin((timeToEffectEnd /duration) * Mathf.PI) * -100f)
+                );
             }
             base.Update();
         }

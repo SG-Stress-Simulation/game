@@ -16,14 +16,14 @@ namespace Zinnia.Action.Effects
         public override void StartEffect()
         {
             base.StartEffect();
+            dof.enabled.Override(true);
+            dof.aperture.Override(32f);
         }
 
         public void Start()
         {
             base.Start();
             dof = ScriptableObject.CreateInstance<DepthOfField>();
-            dof.enabled.Override(true);
-            dof.aperture.Override(32f);
             m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, dof);
         }
         
@@ -31,7 +31,8 @@ namespace Zinnia.Action.Effects
         {
             if (effectRunning)
             {
-                dof.focusDistance.Override(timeToEffectEnd / 2);
+                dof.focusDistance.Override(
+                    Mathf.Sin((timeToEffectEnd /duration) * Mathf.PI) * 32f);
             }
             base.Update();
         }
