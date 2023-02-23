@@ -10673,6 +10673,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VignetteEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 3535150517906089465, guid: 41d4ed6523538282cbd010b418eba7e1,
+        type: 3}
+      propertyPath: test
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3535150517906089466, guid: 41d4ed6523538282cbd010b418eba7e1,
         type: 3}
       propertyPath: m_RootOrder
