@@ -3768,7 +3768,9 @@ MonoBehaviour:
   normalStateOff: {fileID: 995960587}
   hoverStateOff: {fileID: 1950934874}
   LeftInteractor: {fileID: 3323306219172047383}
+  LeftCollider: {fileID: 3395708648898626591}
   RightInteractor: {fileID: 3323306219990421181}
+  RightCollider: {fileID: 3395708648898626590}
   KnucklesRotation: 0
   ViveRotation: 30
 --- !u!1 &576491081
@@ -14241,6 +14243,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -9.63
       objectReference: {fileID: 0}
+    - target: {fileID: 7409502616188912194, guid: afb9687519a025a42b998810082eb84a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afb9687519a025a42b998810082eb84a, type: 3}
 --- !u!1 &3395708648898626588 stripped
@@ -14262,3 +14269,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializedGuid: b239b3891bf4ab4692c7242ed29488d5
+--- !u!1 &3395708648898626590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7409502616188912194, guid: afb9687519a025a42b998810082eb84a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3395708648898626587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3395708648898626591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7409502616498833333, guid: afb9687519a025a42b998810082eb84a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3395708648898626587}
+  m_PrefabAsset: {fileID: 0}
