@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using Zinnia.Action.Effects;
 using Random = UnityEngine.Random;
 
 public class BaseEffect : MonoBehaviour
@@ -13,16 +14,29 @@ public class BaseEffect : MonoBehaviour
     public float duration = 0.0f;
     public bool test = false;
     [HideInInspector]
+    public bool loop = false;
+    [HideInInspector]
     public bool effectRunning = false;
+
+    [HideInInspector] public float intensity = EffectDefaults.EFFECT_INTENSITY;
     
     [HideInInspector]
     public PostProcessVolume m_Volume;
 
-    public virtual void StartEffect()
+    public virtual void StartEffect(bool oneShot = true, float effectDuration = EffectDefaults.EFFECT_DURATION, float effectIntensity = EffectDefaults.EFFECT_INTENSITY)
     {
         Debug.Log("Started Effect");
-        timeToEffectEnd = Random.Range(timeToEffectEndMin, timeToEffectEndMax) * Mathf.PI;
+        if(effectDuration > 0.0f)
+        {
+            timeToEffectEnd = effectDuration;
+        }
+        else
+        {
+            timeToEffectEnd = Random.Range(timeToEffectEndMin, timeToEffectEndMax) * Mathf.PI;
+        }
         duration = timeToEffectEnd;
+        intensity = effectIntensity;
+        loop = !oneShot;
         effectRunning = true;
         Debug.Log("Duration " + duration);
     }
@@ -30,6 +44,7 @@ public class BaseEffect : MonoBehaviour
     public virtual void StopEffect()
     {
         Debug.Log("Stopped Effect");
+        loop = false;
         effectRunning = false;
     }
     
@@ -44,9 +59,9 @@ public class BaseEffect : MonoBehaviour
 
     public virtual void Update()
     {
-        if(test) effectRunning = true;
-        if (timeToEffectEnd <= 0 && !test && effectRunning) StopEffect();
-        if (timeToEffectEnd <= 0 && test) timeToEffectEnd = Random.Range(timeToEffectEndMin, timeToEffectEndMax);
+        if(test || loop) effectRunning = true;
+        if (timeToEffectEnd <= 0 && !(test || loop) && effectRunning) StopEffect();
+        if (timeToEffectEnd <= 0 && (test || loop)) timeToEffectEnd = Random.Range(timeToEffectEndMin, timeToEffectEndMax);
         timeToEffectEnd -= Time.deltaTime;
     }
     

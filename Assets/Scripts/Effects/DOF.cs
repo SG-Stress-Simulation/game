@@ -13,9 +13,9 @@ namespace Zinnia.Action.Effects
             dof.enabled.Override(false);
         }
 
-        public override void StartEffect()
+        public override void StartEffect(bool oneShot = true, float effectDuration = EffectDefaults.EFFECT_DURATION, float effectIntensity = EffectDefaults.EFFECT_INTENSITY)
         {
-            base.StartEffect();
+            base.StartEffect(oneShot, effectDuration, effectIntensity);
             dof.enabled.Override(true);
             dof.aperture.Override(32f);
         }

@@ -9,7 +9,8 @@ enum NextEffect
     NONE,
     COLOR_LOSS,
     DOF,
-    VIGNETTE
+    VIGNETTE,
+    STOP_EFFECTS
 }
 
 public class HTTPController : MonoBehaviour
@@ -18,23 +19,42 @@ public class HTTPController : MonoBehaviour
     public VignetteEffect vignetteEffect;
     public DOF dofEffect;
     private NextEffect nextEffect = NextEffect.NONE;
+    public bool inifiniteEffectRunning = false;
+    public bool nextEffectInfinte = false;
+    public float nextEffectDuration = -0.1f;
+    public float nextEffectIntensity = 0.75f;
 
-    public ReturnResult StartVignette()
+public ReturnResult StartVignette(bool infinite = EffectDefaults.EFFECT_INFINITE, float duration = EffectDefaults.EFFECT_DURATION, float intensity = EffectDefaults.EFFECT_INTENSITY)
     {
         nextEffect = NextEffect.VIGNETTE;
+        nextEffectInfinte = infinite;
+        nextEffectDuration = duration;
+        nextEffectIntensity = intensity;
         return StandardResult("VIGNETTE");
     }
     
-    public ReturnResult StartDOF()
+    public ReturnResult StartDOF(bool infinite = EffectDefaults.EFFECT_INFINITE, float duration = EffectDefaults.EFFECT_DURATION, float intensity = EffectDefaults.EFFECT_INTENSITY)
     {
         nextEffect = NextEffect.DOF;
+        nextEffectInfinte = infinite;
+        nextEffectDuration = duration;
+        nextEffectIntensity = intensity;
         return StandardResult("DOF");
     }
 
-    public ReturnResult StartColorLoss()
+    public ReturnResult StartColorLoss(bool infinite = EffectDefaults.EFFECT_INFINITE, float duration = EffectDefaults.EFFECT_DURATION, float intensity = EffectDefaults.EFFECT_INTENSITY)
     {
         nextEffect = NextEffect.COLOR_LOSS;
-        return StandardResult("COLOR LOSS");
+        nextEffectInfinte = infinite;
+        nextEffectDuration = duration;
+        nextEffectIntensity = intensity;
+        return StandardResult("COLOR_LOSS");
+    }
+    
+    public ReturnResult StopEffects()
+    {
+        nextEffect = NextEffect.STOP_EFFECTS;
+        return StandardResult("STOP EFFECTS");
     }
     
     public ReturnResult Health()
@@ -42,7 +62,8 @@ public class HTTPController : MonoBehaviour
         ReturnResult result = new ReturnResult
         {
             code = 200,
-            msg = "up"
+            msg = "up",
+            showStopButton = inifiniteEffectRunning,
         };
         return result;
     }
@@ -53,7 +74,8 @@ public class HTTPController : MonoBehaviour
         ReturnResult result = new ReturnResult
         {
             code = 200,
-            msg = effectName + " effect started"
+            msg = effectName + " effect started",
+            showStopButton = inifiniteEffectRunning,
         };
         return result;
     }
@@ -64,6 +86,7 @@ public class HTTPController : MonoBehaviour
     {
         public string msg;
         public int code;
+        public bool showStopButton;
     }
 
     public void Update()
@@ -71,17 +94,23 @@ public class HTTPController : MonoBehaviour
         switch (nextEffect)
         {
             case NextEffect.VIGNETTE:
-                vignetteEffect.StartEffect();
-                nextEffect = NextEffect.NONE;
+                vignetteEffect.StartEffect(!nextEffectInfinte);
                 break;
             case NextEffect.DOF:
-                dofEffect.StartEffect();
-                nextEffect = NextEffect.NONE;
+                dofEffect.StartEffect(!nextEffectInfinte);
                 break;
             case NextEffect.COLOR_LOSS:
-                colorLossEffect.StartEffect();
-                nextEffect = NextEffect.NONE;
+                colorLossEffect.StartEffect(!nextEffectInfinte);
+                break;
+            case NextEffect.STOP_EFFECTS:
+                vignetteEffect.StopEffect();
+                dofEffect.StopEffect();
+                colorLossEffect.StopEffect();
                 break;
         }
+
+        nextEffectInfinte = false;
+        nextEffect = NextEffect.NONE;
+        nextEffectDuration = 4 * Mathf.PI;
     }
 }
