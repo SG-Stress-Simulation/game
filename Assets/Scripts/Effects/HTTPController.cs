@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using Zinnia.Action.Effects;
+using Zinnia.Data.Type.Transformation.Conversion;
 
 enum NextEffect
 {
@@ -24,30 +26,30 @@ public class HTTPController : MonoBehaviour
     public float nextEffectDuration = -0.1f;
     public float nextEffectIntensity = 0.75f;
 
-public ReturnResult StartVignette(bool infinite = EffectDefaults.EFFECT_INFINITE, float duration = EffectDefaults.EFFECT_DURATION, float intensity = EffectDefaults.EFFECT_INTENSITY)
+public ReturnResult StartVignette(bool infinite = EffectDefaults.EFFECT_INFINITE, string duration = "-1.0", string intensity = "0.75")
     {
         nextEffect = NextEffect.VIGNETTE;
         nextEffectInfinte = infinite;
-        nextEffectDuration = duration;
-        nextEffectIntensity = intensity;
+        nextEffectDuration = float.Parse(duration, CultureInfo.InvariantCulture.NumberFormat);
+        nextEffectIntensity = float.Parse(intensity, CultureInfo.InvariantCulture.NumberFormat);;
         return StandardResult("VIGNETTE");
     }
     
-    public ReturnResult StartDOF(bool infinite = EffectDefaults.EFFECT_INFINITE, float duration = EffectDefaults.EFFECT_DURATION, float intensity = EffectDefaults.EFFECT_INTENSITY)
+    public ReturnResult StartDOF(bool infinite = EffectDefaults.EFFECT_INFINITE, string duration = "-1.0", string intensity = "0.75")
     {
         nextEffect = NextEffect.DOF;
         nextEffectInfinte = infinite;
-        nextEffectDuration = duration;
-        nextEffectIntensity = intensity;
+        nextEffectDuration = float.Parse(duration, CultureInfo.InvariantCulture.NumberFormat);
+        nextEffectIntensity = float.Parse(intensity, CultureInfo.InvariantCulture.NumberFormat);;
         return StandardResult("DOF");
     }
 
-    public ReturnResult StartColorLoss(bool infinite = EffectDefaults.EFFECT_INFINITE, float duration = EffectDefaults.EFFECT_DURATION, float intensity = EffectDefaults.EFFECT_INTENSITY)
+    public ReturnResult StartColorLoss(bool infinite = EffectDefaults.EFFECT_INFINITE, string duration = "-1.0", string intensity = "0.75")
     {
         nextEffect = NextEffect.COLOR_LOSS;
         nextEffectInfinte = infinite;
-        nextEffectDuration = duration;
-        nextEffectIntensity = intensity;
+        nextEffectDuration = float.Parse(duration, CultureInfo.InvariantCulture.NumberFormat);
+        nextEffectIntensity = float.Parse(intensity, CultureInfo.InvariantCulture.NumberFormat);;
         return StandardResult("COLOR_LOSS");
     }
     
@@ -94,13 +96,13 @@ public ReturnResult StartVignette(bool infinite = EffectDefaults.EFFECT_INFINITE
         switch (nextEffect)
         {
             case NextEffect.VIGNETTE:
-                vignetteEffect.StartEffect(!nextEffectInfinte);
+                vignetteEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.DOF:
-                dofEffect.StartEffect(!nextEffectInfinte);
+                dofEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.COLOR_LOSS:
-                colorLossEffect.StartEffect(!nextEffectInfinte);
+                colorLossEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.STOP_EFFECTS:
                 vignetteEffect.StopEffect();

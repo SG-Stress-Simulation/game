@@ -251,6 +251,7 @@ body{
         else if (method != null)
         {
             context.Response.ContentType = "application/json";
+            context.Response.AddHeader("Access-Control-Allow-Origin", "*");
 
             object result = null;
             try
