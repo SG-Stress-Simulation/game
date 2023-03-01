@@ -7,7 +7,7 @@ namespace Zinnia.Action.Effects
     {
         DepthOfField dof;
         
-        public void StopEffect()
+        public override void StopEffect()
         {
             base.StopEffect();
             dof.enabled.Override(false);
@@ -20,14 +20,14 @@ namespace Zinnia.Action.Effects
             dof.aperture.Override(32f);
         }
 
-        public void Start()
+        public override void Start()
         {
             base.Start();
             dof = ScriptableObject.CreateInstance<DepthOfField>();
             m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, dof);
         }
         
-        public void Update()
+        public override void Update()
         {
             if (effectRunning)
             {

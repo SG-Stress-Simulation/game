@@ -5074,6 +5074,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789599848}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &797642776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3791072497716707809, guid: afb9687519a025a42b998810082eb84a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3395708648898626587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &810937343
 GameObject:
   m_ObjectHideFlags: 0
@@ -14105,6 +14111,11 @@ PrefabInstance:
       propertyPath: torsoOffset
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 3791072496862536882, guid: afb9687519a025a42b998810082eb84a,
+        type: 3}
+      propertyPath: cameraAnchor
+      value: 
+      objectReference: {fileID: 797642776}
     - target: {fileID: 3791072497057166928, guid: afb9687519a025a42b998810082eb84a,
         type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
