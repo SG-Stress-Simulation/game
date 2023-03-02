@@ -26,28 +26,28 @@ public class HTTPController : MonoBehaviour
     public float nextEffectDuration = -0.1f;
     public float nextEffectIntensity = 0.75f;
 
-public ReturnResult StartVignette(bool infinite = EffectDefaults.EFFECT_INFINITE, string duration = "-1.0", string intensity = "0.75")
+public ReturnResult StartVignette(string infinite = "false", string duration = "-1.0", string intensity = "0.75")
     {
         nextEffect = NextEffect.VIGNETTE;
-        nextEffectInfinte = infinite;
+        nextEffectInfinte = Boolean.Parse(infinite);
         nextEffectDuration = float.Parse(duration, CultureInfo.InvariantCulture.NumberFormat);
         nextEffectIntensity = float.Parse(intensity, CultureInfo.InvariantCulture.NumberFormat);;
         return StandardResult("VIGNETTE");
     }
     
-    public ReturnResult StartDOF(bool infinite = EffectDefaults.EFFECT_INFINITE, string duration = "-1.0", string intensity = "0.75")
+    public ReturnResult StartDOF(string infinite = "false", string duration = "-1.0", string intensity = "0.75")
     {
         nextEffect = NextEffect.DOF;
-        nextEffectInfinte = infinite;
+        nextEffectInfinte = Boolean.Parse(infinite);
         nextEffectDuration = float.Parse(duration, CultureInfo.InvariantCulture.NumberFormat);
         nextEffectIntensity = float.Parse(intensity, CultureInfo.InvariantCulture.NumberFormat);;
         return StandardResult("DOF");
     }
 
-    public ReturnResult StartColorLoss(bool infinite = EffectDefaults.EFFECT_INFINITE, string duration = "-1.0", string intensity = "0.75")
+    public ReturnResult StartColorLoss(string infinite = "false", string duration = "-1.0", string intensity = "0.75")
     {
         nextEffect = NextEffect.COLOR_LOSS;
-        nextEffectInfinte = infinite;
+        nextEffectInfinte = Boolean.Parse(infinite);
         nextEffectDuration = float.Parse(duration, CultureInfo.InvariantCulture.NumberFormat);
         nextEffectIntensity = float.Parse(intensity, CultureInfo.InvariantCulture.NumberFormat);;
         return StandardResult("COLOR_LOSS");
