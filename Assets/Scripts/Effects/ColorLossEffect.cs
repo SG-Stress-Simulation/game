@@ -18,7 +18,7 @@ namespace Zinnia.Action.Effects
             base.StartEffect(oneShot, effectDuration, effectIntensity);
         }
 
-        public void Start()
+        public override void Start()
         {
             base.Start();
             m_CG = ScriptableObject.CreateInstance<ColorGrading>();
@@ -26,7 +26,7 @@ namespace Zinnia.Action.Effects
             m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_CG);
         }
         
-        public void Update()
+        public override void Update()
         {
             if (effectRunning)
             {

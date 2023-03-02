@@ -22,7 +22,7 @@ namespace Zinnia.Action.Effects
             m_AudioSource.Play();
         }
 
-        public void Start()
+        public override void Start()
         {
             base.Start();
             m_Vignette = ScriptableObject.CreateInstance<Vignette>();
@@ -31,7 +31,7 @@ namespace Zinnia.Action.Effects
             m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_Vignette);
         }
 
-        public void Update()
+        public override void Update()
         {
             if (effectRunning)
             {

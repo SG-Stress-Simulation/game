@@ -6033,7 +6033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370684124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.35, y: 0, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27534,7 +27534,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Stelle dich auf so markierte\nFl\xE4chen um dich zu bewegen\noder Aktivit\xE4ten
-    zu staten."
+    zu starten."
 --- !u!222 &1714090441
 CanvasRenderer:
   m_ObjectHideFlags: 0
