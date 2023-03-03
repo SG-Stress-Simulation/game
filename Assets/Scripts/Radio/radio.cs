@@ -5,16 +5,14 @@ using Zinnia.Action;
 
 public class radio : MonoBehaviour
 {
-    private bool state;
+
+    private AudioSource source;
 
     [Header("Interactors")]
     public BooleanAction leftTriggerPressed;
     public BooleanAction rightTriggerPressed;
     public GuidReference leftHand;
     public GuidReference rightHand;
-
-    [Header("Radio Noise")]
-    public AudioClip radioNoise;
 
     [Header("Debounce")]
     public float debounceTime = 0.5f;
@@ -26,7 +24,7 @@ public class radio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        state = false;
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,28 +47,14 @@ public class radio : MonoBehaviour
 
         if (isPressedL || isPressedR || isPressedSim)
         {
-            if(state)
-            {
-                GetComponent<AudioSource>().Stop();
-                state= false;
 
-                button.transform.eulerAngles = new Vector3(
-                    30,
-                    button.transform.eulerAngles.y,
-                    button.transform.eulerAngles.z
-                );
-            } else
-            {
-                GetComponent<AudioSource>().clip = radioNoise;
-                GetComponent<AudioSource>().Play();
-                state = true;
+            button.transform.eulerAngles = new Vector3(
+                -(button.transform.eulerAngles.x),
+                button.transform.eulerAngles.y,
+                button.transform.eulerAngles.z
+            );
 
-                button.transform.eulerAngles = new Vector3(
-                    -30,
-                    button.transform.eulerAngles.y,
-                    button.transform.eulerAngles.z
-                );
-            }
+            source.enabled = !source.enabled;
             debounceTimer = debounceTime;
         }
     }
