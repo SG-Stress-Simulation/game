@@ -16972,12 +16972,17 @@ PrefabInstance:
     - target: {fileID: 367273391068485716, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_Text
-      value: Lege Schalter mit deinem Zeigefinger um.
+      value: Legen Sie den Schalter mit deinem Zeigefinger um.
+      objectReference: {fileID: 0}
+    - target: {fileID: 367273391321343323, guid: f353a3e11818a814483b03c5ba1db1c3,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 367273391356633656, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 610
+      value: 710
       objectReference: {fileID: 0}
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -17057,7 +17062,7 @@ PrefabInstance:
     - target: {fileID: 367273391561714908, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f353a3e11818a814483b03c5ba1db1c3, type: 3}
@@ -22147,8 +22152,8 @@ PrefabInstance:
     - target: {fileID: 367273391068485716, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_Text
-      value: "Du kannst T\xFCren \xF6ffnen indem du\nsie entweder greifst oder einen\nGegenstand
-        gegen sie dr\xFCckst."
+      value: "Sie k\xF6nnen T\xFCren \xF6ffnen, indem \nSie diese greifen oder mit
+        einem \nGegenstand gegen sie dr\xFCcken."
       objectReference: {fileID: 0}
     - target: {fileID: 367273391321343323, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -27534,8 +27539,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Stelle dich auf so markierte\nFl\xE4chen um dich zu bewegen\noder Aktivit\xE4ten
-    zu starten."
+  m_Text: "Stellen Sie sich auf solch markierte\nFl\xE4chen, damit Sie sich bewegen,\noder
+    im Level voranschreiten."
 --- !u!222 &1714090441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34793,6 +34798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 367273391321343323, guid: f353a3e11818a814483b03c5ba1db1c3,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 367273391356633656, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
