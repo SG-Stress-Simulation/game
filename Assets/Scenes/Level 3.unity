@@ -594,7 +594,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2187aa34e3f9d0d4c9924a7f9275c6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInThisSceneToIgnore: []
+  objectsInThisSceneToIgnore:
+  - {fileID: 625561679}
+  - {fileID: 1532867878}
+  - {fileID: 6337711905071048287}
+  - {fileID: 1590356587}
   objectsInOtherScenesToIgnore:
   - serializedGuid: b239b3891bf4ab4692c7242ed29488d5
     cachedName: Headset.CollisionFader
@@ -19865,7 +19869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6337711904928321042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
