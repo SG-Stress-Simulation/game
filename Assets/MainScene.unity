@@ -14099,12 +14099,12 @@ PrefabInstance:
     - target: {fileID: 1351749839920360527, guid: afb9687519a025a42b998810082eb84a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1951953142943133482, guid: afb9687519a025a42b998810082eb84a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3791072496862536882, guid: afb9687519a025a42b998810082eb84a,
         type: 3}
