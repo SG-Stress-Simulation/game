@@ -13165,6 +13165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsInThisSceneToIgnore:
   - {fileID: 426227415}
+  - {fileID: 370684124}
   objectsInOtherScenesToIgnore:
   - serializedGuid: b239b3891bf4ab4692c7242ed29488d5
     cachedName: Headset.CollisionFader
