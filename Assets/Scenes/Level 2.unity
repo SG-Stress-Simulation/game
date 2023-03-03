@@ -8801,6 +8801,9 @@ MonoBehaviour:
   objectsInThisSceneToIgnore:
   - {fileID: 1792737100}
   - {fileID: 179595664}
+  - {fileID: 695985613}
+  - {fileID: 1071667501}
+  - {fileID: 325073445}
   objectsInOtherScenesToIgnore:
   - serializedGuid: b239b3891bf4ab4692c7242ed29488d5
     cachedName: Headset.CollisionFader

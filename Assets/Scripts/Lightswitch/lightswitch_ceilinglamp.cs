@@ -97,8 +97,13 @@ public class lightswitch_ceilinglamp : MonoBehaviour
                 for (int i = 0; i < lampshades.Length; i++)
                 {
                     lampshades[i].GetComponent<MeshRenderer>().material = shadeOffMat;
-                    if (i < 2) bulbs[i].GetComponent<MeshRenderer>().material = bulbOffMat;
                 }
+
+                for (int i = 0; i < bulbs.Length; i++)
+                {
+                    bulbs[i].GetComponent<MeshRenderer>().material = bulbOffMat;
+                }
+
                 lightState = false;
 
                 button.transform.eulerAngles = new Vector3(
