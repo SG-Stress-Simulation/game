@@ -1327,7 +1327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73720237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2185,8 +2185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineOrigin: {fileID: 1653000883}
   facingSource: {fileID: 1054612036}
-  tooltipText: "Stelle dich auf so markierte\nFl\xE4chen um dich zu bewegen\noder
-    Aktivit\xE4ten zu staten."
+  tooltipText: "Stellen Sie sich auf solch markierte\nFl\xE4chen, damit Sie sich
+    bewegen,\noder im Level voranschreiten."
   fontSize: 30
   fontColor: {r: 0, g: 0, b: 0, a: 1}
   outerBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -15897,7 +15897,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971360947}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16969,11 +16969,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1830269655}
     m_Modifications:
-    - target: {fileID: 367273391068485716, guid: f353a3e11818a814483b03c5ba1db1c3,
-        type: 3}
-      propertyPath: m_Text
-      value: Legen Sie den Schalter mit deinem Zeigefinger um.
-      objectReference: {fileID: 0}
     - target: {fileID: 367273391321343323, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -16992,7 +16987,7 @@ PrefabInstance:
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: tooltipText
-      value: Lege Schalter mit deinem Zeigefinger um.
+      value: Legen Sie Schalter mit Ihrem Zeigefinger um.
       objectReference: {fileID: 0}
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -17007,6 +17002,21 @@ PrefabInstance:
     - target: {fileID: 367273391513093873, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 367273391513093873, guid: f353a3e11818a814483b03c5ba1db1c3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 367273391513093873, guid: f353a3e11818a814483b03c5ba1db1c3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 367273391513093873, guid: f353a3e11818a814483b03c5ba1db1c3,
+        type: 3}
+      propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 367273391513093873, guid: f353a3e11818a814483b03c5ba1db1c3,
@@ -18488,12 +18498,17 @@ PrefabInstance:
     - target: {fileID: 367273391068485714, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 700
+      value: 770
+      objectReference: {fileID: 0}
+    - target: {fileID: 367273391321343323, guid: f353a3e11818a814483b03c5ba1db1c3,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 367273391356633656, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 710
+      value: 780
       objectReference: {fileID: 0}
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -18503,7 +18518,7 @@ PrefabInstance:
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: tooltipText
-      value: "Dr\xFCcke diesen Knopf, um das Tutorial zu beenden."
+      value: "Dr\xFCcken Sie diesen Knopf, um das Tutorial zu beenden."
       objectReference: {fileID: 0}
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -18573,7 +18588,7 @@ PrefabInstance:
     - target: {fileID: 367273391561714908, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 700
+      value: 770
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f353a3e11818a814483b03c5ba1db1c3, type: 3}
@@ -19552,8 +19567,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineOrigin: {fileID: 359197860}
   facingSource: {fileID: 1054612036}
-  tooltipText: "Stelle dich auf so markierte\nFl\xE4chen um dich zu bewegen\noder
-    Aktivit\xE4ten zu staten."
+  tooltipText: "Stellen Sie sich auf solch markierte\nFl\xE4chen, damit Sie sich
+    bewegen,\noder im Level voranschreiten."
   fontSize: 30
   fontColor: {r: 0, g: 0, b: 0, a: 1}
   outerBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -20326,7 +20341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1275736362
 Transform:
   m_ObjectHideFlags: 0
@@ -21347,7 +21362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15.8}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1356738368
@@ -21423,8 +21438,6 @@ MonoBehaviour:
       m_Calls: []
   currentIndex: 0
   elements:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 1366170626}
 --- !u!1 &1358924195
 GameObject:
@@ -22149,12 +22162,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 370684125}
     m_Modifications:
-    - target: {fileID: 367273391068485716, guid: f353a3e11818a814483b03c5ba1db1c3,
-        type: 3}
-      propertyPath: m_Text
-      value: "Sie k\xF6nnen T\xFCren \xF6ffnen, indem \nSie diese greifen oder mit
-        einem \nGegenstand gegen sie dr\xFCcken."
-      objectReference: {fileID: 0}
     - target: {fileID: 367273391321343323, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -22178,8 +22185,8 @@ PrefabInstance:
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: tooltipText
-      value: "Du kannst T\xFCren \xF6ffnen indem du\nsie entweder greifst oder einen\nGegenstand
-        gegen sie dr\xFCckst."
+      value: "Sie k\xF6nnen T\xFCren \xF6ffnen, indem \nSie diese greifen oder mit
+        einem \nGegenstand gegen sie dr\xFCcken."
       objectReference: {fileID: 0}
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -27539,8 +27546,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Stellen Sie sich auf solch markierte\nFl\xE4chen, damit Sie sich bewegen,\noder
-    im Level voranschreiten."
+  m_Text: New Text
 --- !u!222 &1714090441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32766,6 +32772,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
         type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
+        type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 670899578}
@@ -32776,12 +32787,22 @@ PrefabInstance:
       objectReference: {fileID: 516871929}
     - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
         type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1508739011}
+    - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
+        type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
+        type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
@@ -32796,6 +32817,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
         type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetIgnoreCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
+        type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
@@ -32803,6 +32829,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Tutorial, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
+        type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: AccrossSceneCollisionIgnorer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
         type: 3}
@@ -32816,12 +32847,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
         type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
+        type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097713443119345399, guid: fe37ed9670a759f4982047abcdc2f0eb,
+        type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3887752888394252363, guid: fe37ed9670a759f4982047abcdc2f0eb,
@@ -34797,7 +34838,7 @@ PrefabInstance:
     - target: {fileID: 367273391068485714, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 700
+      value: 770
       objectReference: {fileID: 0}
     - target: {fileID: 367273391321343323, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -34807,7 +34848,7 @@ PrefabInstance:
     - target: {fileID: 367273391356633656, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 710
+      value: 780
       objectReference: {fileID: 0}
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -34817,7 +34858,7 @@ PrefabInstance:
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: tooltipText
-      value: "Dr\xFCcke diesen Knopf, um das Tutorial fortzuf\xFChren."
+      value: "Dr\xFCcken Sie diesen Knopf, um das Tutorial fortzuf\xFChren."
       objectReference: {fileID: 0}
     - target: {fileID: 367273391513093774, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
@@ -34887,7 +34928,7 @@ PrefabInstance:
     - target: {fileID: 367273391561714908, guid: f353a3e11818a814483b03c5ba1db1c3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 700
+      value: 770
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f353a3e11818a814483b03c5ba1db1c3, type: 3}
