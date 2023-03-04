@@ -20153,6 +20153,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3791072496680953958, guid: afb9687519a025a42b998810082eb84a,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791072496680953958, guid: afb9687519a025a42b998810082eb84a,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3791072496862536882, guid: afb9687519a025a42b998810082eb84a,
         type: 3}
       propertyPath: torsoOffset
