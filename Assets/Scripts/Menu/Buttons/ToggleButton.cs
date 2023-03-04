@@ -67,6 +67,7 @@ public class ToggleButton : MonoBehaviour
 
   // Start is called before the first frame update
   protected void Start() { 
+    isToggled = initialIsToggled;
     normalStateOff.SetActive(!initialIsToggled);
     hoverStateOff.SetActive(false);
     normalStateOn.SetActive(initialIsToggled);

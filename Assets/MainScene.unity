@@ -6013,7 +6013,7 @@ MonoBehaviour:
   onToggleOn:
     m_PersistentCalls:
       m_Calls: []
-  initialIsToggled: 0
+  initialIsToggled: 1
   normalStateOn: {fileID: 1975489612}
   hoverStateOn: {fileID: 913067322}
   normalStateOff: {fileID: 1971515281}
