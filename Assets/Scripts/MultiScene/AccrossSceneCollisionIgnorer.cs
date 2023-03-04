@@ -6,8 +6,7 @@ public class AccrossSceneCollisionIgnorer : MonoBehaviour
   public GameObject[] objectsInThisSceneToIgnore;
   public GuidReference[] objectsInOtherScenesToIgnore;
 
-  // Start is called before the first frame update
-  void Start()
+  public void SetIgnoreCollision()
   {
     // recursively find all colliders in each object
     List<Collider> thisSceneColliders = new List<Collider>();
@@ -24,5 +23,11 @@ public class AccrossSceneCollisionIgnorer : MonoBehaviour
         Physics.IgnoreCollision(collider, otherCollider);
       }
     }
+  }
+
+  // Start is called before the first frame update
+  void Start()
+  {
+    SetIgnoreCollision();
   }
 }
