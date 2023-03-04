@@ -1,15 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Net.Sockets;
 using System.Net;
-using System.IO;
-using System.Threading;
-using System.Diagnostics;
-using System.Reflection;
 
 
 public class UnityHTTPServer : MonoBehaviour
@@ -29,7 +21,6 @@ public class UnityHTTPServer : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        DontDestroyOnLoad(gameObject);
         if (myServer == null)
         {
             Init();
