@@ -26,7 +26,8 @@ public class Level3 : MonoBehaviour
 
     public void StartingSequenceComplete()
     {
-        collisionForcer.gameObject.SetActive(false);
+        if (collisionForcer.gameObject)
+            collisionForcer.gameObject.GetComponent<SphereCollider>().enabled = false;
         onRoomEntered.Invoke();
     }
 
@@ -38,7 +39,8 @@ public class Level3 : MonoBehaviour
     public void EnterRoom()
     {
         onRoomEnter.Invoke();
-        collisionForcer.gameObject.SetActive(true);
+        if (collisionForcer.gameObject)
+        collisionForcer.gameObject.GetComponent<SphereCollider>().enabled = true;
 
         Invoke("MoveScene", 0.2f);
         Invoke("StartingSequenceComplete", 1f);
