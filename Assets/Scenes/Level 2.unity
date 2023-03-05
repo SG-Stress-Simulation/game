@@ -32820,7 +32820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineOrigin: {fileID: 222042034}
   facingSource: {fileID: 1951322456}
-  tooltipText: Steh hier, um das Level zu beginnen.
+  tooltipText: Stehen Sie hier, um das Level zu beginnen.
   fontSize: 30
   fontColor: {r: 0, g: 0, b: 0, a: 1}
   outerBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
