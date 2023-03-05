@@ -7,7 +7,10 @@ public class PositionMock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (mock != null)
-            gameObject.transform.position = mock.gameObject.transform.position;
+    if (mock != null)
+    {
+      gameObject.transform.position = mock.gameObject.transform.position;
+      gameObject.transform.rotation = mock.gameObject.transform.rotation;
     }
+  }
 }

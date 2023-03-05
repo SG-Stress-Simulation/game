@@ -36906,6 +36906,14 @@ MonoBehaviour:
     serializedGuid: 04f0f5f3415ae243b814eb392d0ea93e
     cachedName: Menu
     cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
+  leftInteractor:
+    serializedGuid: 1705f5c31ac61a409ab54b25fe67732d
+    cachedName: Left.Interactor
+    cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
+  rightInteractor:
+    serializedGuid: fc09678aaf77ed46bddc163cfadf40e2
+    cachedName: Right.Interactor
+    cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
 --- !u!1 &1963141225
 GameObject:
   m_ObjectHideFlags: 0
