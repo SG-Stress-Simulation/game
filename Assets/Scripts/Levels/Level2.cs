@@ -1,3 +1,4 @@
+using Tilia.Interactions.Interactables.Interactors;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,8 @@ public class Level2 : MonoBehaviour
     public GuidReference collisionForcer;
     public Animator scene;
     public GuidReference menu;
+    public GuidReference leftInteractor;
+    public GuidReference rightInteractor;
 
     public void OnEnable()
     {
@@ -49,6 +52,24 @@ public class Level2 : MonoBehaviour
     public void levelEndPostAnimationEvent()
     {
         if (menu != null) {
+            InteractorFacade leftFacade = leftInteractor.gameObject.GetComponent<InteractorFacade>();
+            InteractorFacade rightFacade = rightInteractor.gameObject.GetComponent<InteractorFacade>();
+            bool ungrabLeft = false;
+            for (int i = 0; i < leftFacade.GrabbedObjects.Count; i++) {
+            if (leftFacade.GrabbedObjects[i].gameObject.scene.name == "Level 2")
+                ungrabLeft = true;
+            }
+            if (ungrabLeft)
+            rightFacade.Ungrab();
+
+            bool ungrabRight = false;
+            for (int i = 0; i < rightFacade.GrabbedObjects.Count; i++) {
+            if (rightFacade.GrabbedObjects[i].gameObject.scene.name == "Level 2")
+                ungrabRight = true;
+            }
+            if (ungrabRight)
+            rightFacade.Ungrab();
+
             SceneManager.UnloadSceneAsync("Level 2");
             menu.gameObject.SetActive(true);
             menu.gameObject.SendMessage("Enable");
