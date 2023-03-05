@@ -1904,7 +1904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 91787476}
-  - component: {fileID: 91787475}
+  - component: {fileID: 91787477}
   m_Layer: 0
   m_Name: ObjectList
   m_TagString: Untagged
@@ -1912,7 +1912,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &91787475
+--- !u!4 &91787476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91787474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1985590571}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &91787477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1921,7 +1936,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 91787474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6b6179884db4f45985375ba8170f77, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ebf31b559ea3ba45a2d0726dcf02829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Obtained:
@@ -1952,23 +1967,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   currentIndex: 0
-  elements:
-  - {fileID: 0}
---- !u!4 &91787476
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91787474}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1985590571}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  elements: []
+  listMock:
+  - serializedGuid: 1705f5c31ac61a409ab54b25fe67732d
+    cachedName: Left.Interactor
+    cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
 --- !u!1 &94948225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,7 +3388,7 @@ MonoBehaviour:
     Matched:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 832281680}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -3402,7 +3405,7 @@ MonoBehaviour:
     Matched:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1642478411}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -4091,23 +4094,10 @@ MonoBehaviour:
     Matched:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 832281680}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Tilia.Trackers.ColliderFollower.ColliderFollowerFacade,
-            Tilia.Trackers.ColliderFollower.Unity.Runtime
-          m_MethodName: SnapToSource
-          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4121,23 +4111,10 @@ MonoBehaviour:
     Matched:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1642478411}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Tilia.Trackers.ColliderFollower.ColliderFollowerFacade,
-            Tilia.Trackers.ColliderFollower.Unity.Runtime
-          m_MethodName: SnapToSource
-          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4921,23 +4898,10 @@ MonoBehaviour:
     Matched:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 832281680}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Tilia.Trackers.ColliderFollower.ColliderFollowerFacade,
-            Tilia.Trackers.ColliderFollower.Unity.Runtime
-          m_MethodName: SnapToSource
-          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4951,23 +4915,10 @@ MonoBehaviour:
     Matched:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1642478411}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Tilia.Trackers.ColliderFollower.ColliderFollowerFacade,
-            Tilia.Trackers.ColliderFollower.Unity.Runtime
-          m_MethodName: SnapToSource
-          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7659,6 +7610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491246488}
   - component: {fileID: 491246489}
+  - component: {fileID: 491246490}
   m_Layer: 0
   m_Name: RightControllerMock
   m_TagString: Untagged
@@ -7677,7 +7629,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1642478412}
   m_Father: {fileID: 1312955658}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7716,6 +7669,22 @@ MonoBehaviour:
   - serializedGuid: 2d13a5c2f8e54740bc7772984230cca2
     cachedName: RightTrigger_Press
     cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
+--- !u!114 &491246490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491246487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134ad9c520b2e99458d610be39360acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mock:
+    serializedGuid: ce0ed7f0acd3614289557a6aa820b7ed
+    cachedName: RightControllerAlias
+    cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
 --- !u!1 &493880427
 GameObject:
   m_ObjectHideFlags: 0
@@ -7746,7 +7715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoRejectStates: -1
-  objects: {fileID: 554440230}
+  objects: {fileID: 554440232}
 --- !u!4 &493880429
 Transform:
   m_ObjectHideFlags: 0
@@ -7873,7 +7842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoRejectStates: -1
-  objects: {fileID: 574302381}
+  objects: {fileID: 574302383}
 --- !u!4 &499563538
 Transform:
   m_ObjectHideFlags: 0
@@ -8773,7 +8742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554440231}
-  - component: {fileID: 554440230}
+  - component: {fileID: 554440232}
   m_Layer: 0
   m_Name: ObjectList
   m_TagString: Untagged
@@ -8781,7 +8750,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &554440230
+--- !u!4 &554440231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554440229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 493880429}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &554440232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8790,7 +8774,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 554440229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6b6179884db4f45985375ba8170f77, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ebf31b559ea3ba45a2d0726dcf02829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Obtained:
@@ -8821,23 +8805,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   currentIndex: 0
-  elements:
-  - {fileID: 0}
---- !u!4 &554440231
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554440229}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 493880429}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  elements: []
+  listMock:
+  - serializedGuid: 1705f5c31ac61a409ab54b25fe67732d
+    cachedName: Left.Interactor
+    cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
 --- !u!1 &555026333
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,7 +9555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 574302382}
-  - component: {fileID: 574302381}
+  - component: {fileID: 574302383}
   m_Layer: 0
   m_Name: ObjectList
   m_TagString: Untagged
@@ -9591,7 +9563,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &574302381
+--- !u!4 &574302382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574302380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 499563538}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &574302383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9600,7 +9587,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 574302380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6b6179884db4f45985375ba8170f77, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ebf31b559ea3ba45a2d0726dcf02829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Obtained:
@@ -9631,23 +9618,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   currentIndex: 0
-  elements:
-  - {fileID: 0}
---- !u!4 &574302382
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574302380}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 499563538}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  elements: []
+  listMock:
+  - serializedGuid: fc09678aaf77ed46bddc163cfadf40e2
+    cachedName: Right.Interactor
+    cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
 --- !u!1 &574665565
 GameObject:
   m_ObjectHideFlags: 0
@@ -12276,6 +12251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691492106}
   - component: {fileID: 691492109}
+  - component: {fileID: 691492110}
   m_Layer: 0
   m_Name: LeftControllerMock
   m_TagString: Untagged
@@ -12294,7 +12270,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 832281681}
   m_Father: {fileID: 1312955658}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12332,6 +12309,22 @@ MonoBehaviour:
   externalSources:
   - serializedGuid: fb5f45f2848bfe429bb7fe519b3d08ce
     cachedName: LeftTrigger_Press
+    cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
+--- !u!114 &691492110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691492105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134ad9c520b2e99458d610be39360acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mock:
+    serializedGuid: 987163d8dc7f754db2c0280f38b710f0
+    cachedName: LeftControllerAlias
     cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
 --- !u!1 &700747628
 GameObject:
@@ -14408,6 +14401,68 @@ MonoBehaviour:
         m_CallState: 2
   receiveValidity:
     field: {fileID: 0}
+--- !u!1 &832281680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832281681}
+  - component: {fileID: 832281683}
+  - component: {fileID: 832281682}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &832281681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832281680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 691492106}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &832281682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832281680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &832281683
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832281680}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &853857694
 GameObject:
   m_ObjectHideFlags: 0
@@ -20369,7 +20424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoRejectStates: -1
-  objects: {fileID: 1682476108}
+  objects: {fileID: 1682476110}
 --- !u!4 &1263723544
 Transform:
   m_ObjectHideFlags: 0
@@ -21090,7 +21145,7 @@ MonoBehaviour:
     Matched:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 832281680}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -21107,7 +21162,7 @@ MonoBehaviour:
     Matched:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1642478411}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -26121,6 +26176,68 @@ MonoBehaviour:
   receiveValidity:
     field: {fileID: 0}
   ruleSource: 0
+--- !u!1 &1642478411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642478412}
+  - component: {fileID: 1642478414}
+  - component: {fileID: 1642478413}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1642478412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642478411}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 491246488}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1642478413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642478411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1642478414
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642478411}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1653000883
 GameObject:
   m_ObjectHideFlags: 0
@@ -26878,7 +26995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1682476109}
-  - component: {fileID: 1682476108}
+  - component: {fileID: 1682476110}
   m_Layer: 0
   m_Name: ObjectList
   m_TagString: Untagged
@@ -26886,7 +27003,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1682476108
+--- !u!4 &1682476109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682476107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1263723544}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682476110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26895,7 +27027,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1682476107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6b6179884db4f45985375ba8170f77, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ebf31b559ea3ba45a2d0726dcf02829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Obtained:
@@ -26926,23 +27058,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   currentIndex: 0
-  elements:
-  - {fileID: 0}
---- !u!4 &1682476109
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682476107}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1263723544}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  elements: []
+  listMock:
+  - serializedGuid: fc09678aaf77ed46bddc163cfadf40e2
+    cachedName: Right.Interactor
+    cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
 --- !u!1 &1683827295
 GameObject:
   m_ObjectHideFlags: 0
@@ -33872,7 +33992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoRejectStates: -1
-  objects: {fileID: 91787475}
+  objects: {fileID: 91787477}
 --- !u!4 &1985590571
 Transform:
   m_ObjectHideFlags: 0
