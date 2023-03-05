@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -6,37 +7,51 @@ namespace Zinnia.Action.Effects
     public class VignetteEffect : BaseEffect
     {
         Vignette m_Vignette;
-        AudioSource m_AudioSource;
+        AudioSource[] m_AudioSources;
+        private float timeToSecond = 0.0f;
         
         public override void StopEffect()
         {
             base.StopEffect();
             m_Vignette.intensity.Override( 0f);
-            m_AudioSource.Stop();
+            foreach (var source in m_AudioSources)
+            {
+                source.Stop();
+            }
         }
 
         public override void StartEffect(bool oneShot = true, float effectDuration = EffectDefaults.EFFECT_DURATION, float effectIntensity = EffectDefaults.EFFECT_INTENSITY)
         {
             base.StartEffect(oneShot, effectDuration, effectIntensity);
             m_Vignette.intensity.Override(0f);
-            m_AudioSource.Play();
+            foreach (var source in m_AudioSources)
+            {
+                source.Play();
+            }
         }
 
         public override void Start()
         {
             base.Start();
             m_Vignette = ScriptableObject.CreateInstance<Vignette>();
-            m_AudioSource = GetComponent<AudioSource>();
+            m_AudioSources = GetComponents<AudioSource>();
             m_Vignette.enabled.Override(true);
             m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_Vignette);
         }
 
         public override void Update()
         {
+            if (timeToSecond >= 0.75f)
+            {
+                timeToSecond = 0.0f;
+            }
+
+            timeToSecond += Time.deltaTime;
             if (effectRunning)
             {
-                m_Vignette.intensity.Override(
-                    Mathf.Sin((timeToEffectEnd /duration) * Mathf.PI) * intensity);
+                float overAllIntensity = Mathf.Sin((timeToEffectEnd / duration) * Mathf.PI) * 2f * intensity;
+                float pulse = Mathf.Sin((timeToSecond / 0.75f) * Mathf.PI) * 0.1f;
+                m_Vignette.intensity.Override(overAllIntensity + pulse);
             }
             base.Update();
         }
