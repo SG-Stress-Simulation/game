@@ -496,7 +496,7 @@ MonoBehaviour:
   - {fileID: 1532867878}
   - {fileID: 605312296}
   objectsInOtherScenesToIgnore:
-  - serializedGuid: a25f81363b223542a606a87e8a919342
+  - serializedGuid: ed59ea67ada5754c9fdc3fb9de3b3bfd
     cachedName: Interactables
     cachedScene: {fileID: 102900000, guid: 6b7245e86cf3baf43b91be69136c66dd, type: 3}
 --- !u!4 &345782111
