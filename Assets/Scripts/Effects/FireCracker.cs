@@ -13,14 +13,17 @@ public class FireCracker : MonoBehaviour
     public CanvasGroup AlphaController;
 
     private Vector3 startPos;
+    private Quaternion startRot;
     private AudioSource[] myAudioSources;
     private bool on = false;
+    private bool activated = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
+        startRot = transform.rotation;
         myAudioSources = GetComponents<AudioSource>();
     }
 
@@ -42,7 +45,7 @@ public class FireCracker : MonoBehaviour
             }
         }
 
-        if(transform.position.y < 1.5f)
+        if(transform.position.y < 1.5f && activated)
         {
             myAudioSources[0].Stop();
             myAudioSources[0].clip = explosion;
@@ -53,14 +56,17 @@ public class FireCracker : MonoBehaviour
             AlphaController.alpha = 1;
 
             on = true;
+            activated= false;
 
             transform.position = startPos;
+            transform.rotation = startRot;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
 
         if (Input.GetKeyDown(KeyCode.P))
         {
+            activated = true;
             myAudioSources[0].clip = fuse;
             myAudioSources[0].Play();
             GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 100));            
