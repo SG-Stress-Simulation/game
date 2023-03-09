@@ -13,7 +13,8 @@ enum NextEffect
     DOF,
     VIGNETTE,
     STOP_EFFECTS,
-    FIRECRACKER
+    FIRECRACKER,
+    COOLDOWN
 }
 
 public class HTTPController : MonoBehaviour
@@ -27,6 +28,8 @@ public class HTTPController : MonoBehaviour
     public bool nextEffectInfinte = false;
     public float nextEffectDuration = -0.1f;
     public float nextEffectIntensity = 0.75f;
+
+    private float cooldownTime;
 
     public ReturnResult StartVignette(string infinite = "false", string duration = "-1.0", string intensity = "0.75")
     {
@@ -116,6 +119,19 @@ public class HTTPController : MonoBehaviour
                 if (fireCracker == null || fireCracker.gameObject == null || !fireCracker.gameObject.activeInHierarchy)
                     break;
                 fireCracker.gameObject.GetComponent<FireCracker>().StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
+                nextEffect = NextEffect.COOLDOWN;
+                cooldownTime = 3.0f;
+                break;
+            case NextEffect.COOLDOWN:
+                if (cooldownTime > 0.0f)
+                {
+                    cooldownTime -= Time.deltaTime;
+                }
+                else
+                {
+                    vignetteEffect.StartEffect(true, 20.0f, 1.0f);
+                    nextEffect = NextEffect.NONE;
+                }
                 break;
             case NextEffect.STOP_EFFECTS:
                 vignetteEffect.StopEffect();
@@ -125,7 +141,8 @@ public class HTTPController : MonoBehaviour
         }
 
         nextEffectInfinte = false;
-        nextEffect = NextEffect.NONE;
+        if(nextEffect != NextEffect.COOLDOWN)
+            nextEffect = NextEffect.NONE;
         nextEffectDuration = 4 * Mathf.PI;
     }
 }
