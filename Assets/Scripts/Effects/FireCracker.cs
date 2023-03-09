@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 using Zinnia.Action.Effects;
 
 
@@ -13,6 +14,8 @@ public class FireCracker : BaseEffect
     public AudioClip tinnitus;
 
     public CanvasGroup AlphaController;
+
+    private ColorGrading cg;
 
     private Vector3 startPos;
     private Quaternion startRot;
@@ -38,6 +41,9 @@ public class FireCracker : BaseEffect
         startPos = transform.position;
         startRot = transform.rotation;
         myAudioSources = GetComponents<AudioSource>();
+        cg = ScriptableObject.CreateInstance<ColorGrading>();
+        cg.enabled.Override(true);
+        m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, cg);
     }
         
     public override void Update()
@@ -45,6 +51,11 @@ public class FireCracker : BaseEffect
         if(on)
         {
             AlphaController.alpha = AlphaController.alpha - Time.deltaTime * 1f;
+            while (cg.brightness.value > 0f)
+            {
+                cg.brightness.Override(cg.brightness.value - Time.deltaTime * 10f);
+            }
+            if(cg.brightness.value <= 0f) cg.brightness.Override(0f);
             myAudioSources[1].volume = myAudioSources[1].volume - Time.deltaTime * 0.2f;
 
             if (myAudioSources[1].volume <= 0 ) 
@@ -65,6 +76,7 @@ public class FireCracker : BaseEffect
             myAudioSources[0].Play();
 
             AlphaController.alpha = 1;
+            cg.brightness.Override(100f);
 
             on = true;
             effectRunning = false;
