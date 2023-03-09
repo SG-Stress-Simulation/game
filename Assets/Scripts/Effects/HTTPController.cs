@@ -12,7 +12,8 @@ enum NextEffect
     COLOR_LOSS,
     DOF,
     VIGNETTE,
-    STOP_EFFECTS
+    STOP_EFFECTS,
+    FIRECRACKER
 }
 
 public class HTTPController : MonoBehaviour
@@ -20,6 +21,7 @@ public class HTTPController : MonoBehaviour
     public ColorLossEffect colorLossEffect;
     public VignetteEffect vignetteEffect;
     public DOF dofEffect;
+    public FireCracker fireCracker;
     private NextEffect nextEffect = NextEffect.NONE;
     public bool inifiniteEffectRunning = false;
     public bool nextEffectInfinte = false;
@@ -57,6 +59,12 @@ public ReturnResult StartVignette(string infinite = "false", string duration = "
     {
         nextEffect = NextEffect.STOP_EFFECTS;
         return StandardResult("STOP EFFECTS");
+    }
+
+    public ReturnResult StartFirecracker()
+    {
+        nextEffect = NextEffect.FIRECRACKER;
+        return StandardResult("FIRECRACKER");
     }
     
     public ReturnResult Health()
@@ -103,6 +111,9 @@ public ReturnResult StartVignette(string infinite = "false", string duration = "
                 break;
             case NextEffect.COLOR_LOSS:
                 colorLossEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
+                break;
+            case NextEffect.FIRECRACKER:
+                fireCracker.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.STOP_EFFECTS:
                 vignetteEffect.StopEffect();

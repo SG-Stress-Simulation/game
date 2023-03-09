@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Zinnia.Action.Effects;
 
-public class FireCracker : MonoBehaviour
+
+public class FireCracker : BaseEffect
 {
     [Header("Audio Clips")]
     public AudioClip fuse;
@@ -16,21 +18,30 @@ public class FireCracker : MonoBehaviour
     private Quaternion startRot;
     private AudioSource[] myAudioSources;
     private bool on = false;
-    private bool activated = false;
-
-
-    // Start is called before the first frame update
-    void Start()
+    
+    public override void StopEffect()
     {
+        base.StopEffect();
+    }
+
+    public override void StartEffect(bool oneShot = true, float effectDuration = EffectDefaults.EFFECT_DURATION, float effectIntensity = EffectDefaults.EFFECT_INTENSITY)
+    {
+        base.StartEffect(oneShot, effectDuration, effectIntensity);
+        myAudioSources[0].clip = fuse;
+        myAudioSources[0].Play();
+        GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 100));    
+    }
+
+    public override void Start()
+    {
+        base.Start();
         startPos = transform.position;
         startRot = transform.rotation;
         myAudioSources = GetComponents<AudioSource>();
     }
-
-    // Update is called once per frame
-    void Update()
+        
+    public override void Update()
     {
-
         if(on)
         {
             AlphaController.alpha = AlphaController.alpha - Time.deltaTime * 1f;
@@ -45,7 +56,7 @@ public class FireCracker : MonoBehaviour
             }
         }
 
-        if(transform.position.y < 1.5f && activated)
+        if(transform.position.y < 1.5f && effectRunning)
         {
             myAudioSources[0].Stop();
             myAudioSources[0].clip = explosion;
@@ -56,20 +67,13 @@ public class FireCracker : MonoBehaviour
             AlphaController.alpha = 1;
 
             on = true;
-            activated= false;
+            effectRunning = false;
 
             transform.position = startPos;
             transform.rotation = startRot;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            activated = true;
-            myAudioSources[0].clip = fuse;
-            myAudioSources[0].Play();
-            GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 100));            
-        }
+        base.Update();
     }
 }
