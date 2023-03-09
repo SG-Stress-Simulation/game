@@ -113,7 +113,9 @@ public class HTTPController : MonoBehaviour
                 colorLossEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.FIRECRACKER:
-                if(fireCracker != null) fireCracker.gameObject.GetComponent<FireCracker>().StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
+                if (fireCracker == null || fireCracker.gameObject == null || !fireCracker.gameObject.activeInHierarchy)
+                    break;
+                fireCracker.gameObject.GetComponent<FireCracker>().StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.STOP_EFFECTS:
                 vignetteEffect.StopEffect();
