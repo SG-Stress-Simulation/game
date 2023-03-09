@@ -32,6 +32,8 @@ public class KBDController : MonoBehaviour
         {
             fireCracker.StartEffect();
         }
+        
+        fireCracker = FindObjectOfType<FireCracker>();
             
     }
 }

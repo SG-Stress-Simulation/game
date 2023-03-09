@@ -121,6 +121,8 @@ public ReturnResult StartVignette(string infinite = "false", string duration = "
                 colorLossEffect.StopEffect();
                 break;
         }
+        
+        fireCracker = FindObjectOfType<FireCracker>();
 
         nextEffectInfinte = false;
         nextEffect = NextEffect.NONE;
