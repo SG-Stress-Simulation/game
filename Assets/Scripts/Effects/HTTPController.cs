@@ -21,14 +21,14 @@ public class HTTPController : MonoBehaviour
     public ColorLossEffect colorLossEffect;
     public VignetteEffect vignetteEffect;
     public DOF dofEffect;
-    public FireCracker fireCracker;
+    public GuidReference fireCracker;
     private NextEffect nextEffect = NextEffect.NONE;
     public bool inifiniteEffectRunning = false;
     public bool nextEffectInfinte = false;
     public float nextEffectDuration = -0.1f;
     public float nextEffectIntensity = 0.75f;
 
-public ReturnResult StartVignette(string infinite = "false", string duration = "-1.0", string intensity = "0.75")
+    public ReturnResult StartVignette(string infinite = "false", string duration = "-1.0", string intensity = "0.75")
     {
         nextEffect = NextEffect.VIGNETTE;
         nextEffectInfinte = Boolean.Parse(infinite);
@@ -113,7 +113,7 @@ public ReturnResult StartVignette(string infinite = "false", string duration = "
                 colorLossEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.FIRECRACKER:
-                fireCracker.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
+                if(fireCracker != null) fireCracker.gameObject.GetComponent<FireCracker>().StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.STOP_EFFECTS:
                 vignetteEffect.StopEffect();
@@ -121,8 +121,6 @@ public ReturnResult StartVignette(string infinite = "false", string duration = "
                 colorLossEffect.StopEffect();
                 break;
         }
-        
-        fireCracker = FindObjectOfType<FireCracker>();
 
         nextEffectInfinte = false;
         nextEffect = NextEffect.NONE;

@@ -498,6 +498,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec555c98ab8294468edf71a349068af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToEffectEndMin: 3
+  timeToEffectEndMax: 5
+  timeToEffectEnd: 0
+  duration: 0
+  test: 0
+  loop: 0
+  effectRunning: 0
+  intensity: 0.75
+  m_Volume: {fileID: 0}
   fuse: {fileID: 8300000, guid: b1539d2288e4acc468b46632fc54c0fa, type: 3}
   explosion: {fileID: 8300000, guid: 51677969b35dabb43bcbce8cda82de53, type: 3}
   tinnitus: {fileID: 8300000, guid: 156e4868f8e1c874094925043e744721, type: 3}
@@ -708,6 +717,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &305473374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305473364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bbc2c1e63e98543830eec78d976795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializedGuid: 9cb821e55ba5b34baf3113b8ac790683
 --- !u!1 &319730980
 GameObject:
   m_ObjectHideFlags: 0

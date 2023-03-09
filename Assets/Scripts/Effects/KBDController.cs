@@ -8,7 +8,7 @@ public class KBDController : MonoBehaviour
     public ColorLossEffect colorLossEffect;
     public VignetteEffect vignetteEffect;
     public DOF dofEffect;
-    public FireCracker fireCracker;
+    public GuidReference fireCracker;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +30,7 @@ public class KBDController : MonoBehaviour
             colorLossEffect.StartEffect();
         } else if (Input.GetKeyUp(KeyCode.P))
         {
-            fireCracker.StartEffect();
+            if(fireCracker != null) fireCracker.gameObject.GetComponent<FireCracker>().StartEffect();
         }
-        
-        fireCracker = FindObjectOfType<FireCracker>();
-            
     }
 }
