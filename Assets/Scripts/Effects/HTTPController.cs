@@ -20,7 +20,7 @@ enum NextEffect
 public class HTTPController : MonoBehaviour
 {
     public ColorLossEffect colorLossEffect;
-    public VignetteEffect vignetteEffect;
+    public BlurnetteEffect blurnetteEffect;
     public DOF dofEffect;
     public GuidReference fireCracker;
     private NextEffect nextEffect = NextEffect.NONE;
@@ -107,7 +107,7 @@ public class HTTPController : MonoBehaviour
         switch (nextEffect)
         {
             case NextEffect.VIGNETTE:
-                vignetteEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
+                blurnetteEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
                 break;
             case NextEffect.DOF:
                 dofEffect.StartEffect(!nextEffectInfinte, nextEffectDuration, nextEffectIntensity);
@@ -129,12 +129,12 @@ public class HTTPController : MonoBehaviour
                 }
                 else
                 {
-                    vignetteEffect.StartEffect(true, 20.0f, 1.0f);
+                    blurnetteEffect.StartEffect(true, 20.0f, 1.0f);
                     nextEffect = NextEffect.NONE;
                 }
                 break;
             case NextEffect.STOP_EFFECTS:
-                vignetteEffect.StopEffect();
+                blurnetteEffect.StopEffect();
                 dofEffect.StopEffect();
                 colorLossEffect.StopEffect();
                 break;

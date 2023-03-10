@@ -1466,7 +1466,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   shutterAngle:
     overrideState: 0
     value: 270
@@ -1493,6 +1493,7 @@ MonoBehaviour:
   - {fileID: -8190524859035988608}
   - {fileID: -1920439239268933169}
   - {fileID: -119820134489113964}
+  - {fileID: 6604306493984157135}
 --- !u!114 &1127417729960494669
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1521,6 +1522,28 @@ MonoBehaviour:
   lumContrib:
     overrideState: 1
     value: 0.772
+--- !u!114 &6604306493984157135
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db923092a6ef534da8c8c2e00d0f582, type: 3}
+  m_Name: Blurnette
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  narrowness:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.5
 --- !u!114 &9004460165877593927
 MonoBehaviour:
   m_ObjectHideFlags: 3

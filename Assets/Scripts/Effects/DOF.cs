@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -6,24 +7,29 @@ namespace Zinnia.Action.Effects
     public class DOF : BaseEffect
     {
         DepthOfField dof;
+        private float defaultFocalDistance;
         
         public override void StopEffect()
         {
             base.StopEffect();
-            dof.enabled.Override(false);
+            dof.focusDistance.Override(10f);
+            dof.aperture.Override(32f);
         }
 
         public override void StartEffect(bool oneShot = true, float effectDuration = EffectDefaults.EFFECT_DURATION, float effectIntensity = EffectDefaults.EFFECT_INTENSITY)
         {
             base.StartEffect(oneShot, effectDuration, effectIntensity);
-            dof.enabled.Override(true);
-            dof.aperture.Override(32f);
+            dof.focusDistance.Override(0.4f);
+            dof.aperture.Override(5f);
         }
 
         public override void Start()
         {
             base.Start();
             dof = ScriptableObject.CreateInstance<DepthOfField>();
+            dof.enabled.Override(true);
+            dof.focusDistance.Override(10f);
+            dof.aperture.Override(32f);
             m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, dof);
         }
         
@@ -31,8 +37,19 @@ namespace Zinnia.Action.Effects
         {
             if (effectRunning)
             {
-                dof.focusDistance.Override(
-                    Mathf.Sin((timeToEffectEnd /duration) * Mathf.PI) * 32f);
+                float animationDuration = Math.Min(duration / 2, 1.5f);
+                float intens = intensity;
+
+                if ((duration - timeToEffectEnd) < animationDuration) { 
+                    intens = -((float) Math.Cos(Math.PI * (timeToEffectEnd - duration) / animationDuration) - 1) / 2;
+                }
+                if (timeToEffectEnd < animationDuration) { 
+                    intens = -((float) Math.Cos(Math.PI * timeToEffectEnd / animationDuration) - 1) / 2;
+                }
+
+                // map intens to apaerture (32 - 5) and focal distance (10 - 0.4)
+                dof.aperture.Override(32f - (27f * intens));
+                dof.focusDistance.Override(10f - (9.6f * intens));
             }
             base.Update();
         }

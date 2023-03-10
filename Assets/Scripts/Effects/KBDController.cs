@@ -6,7 +6,7 @@ using Zinnia.Action.Effects;
 public class KBDController : MonoBehaviour
 {
     public ColorLossEffect colorLossEffect;
-    public VignetteEffect vignetteEffect;
+    public BlurnetteEffect blurnetteEffect;
     public DOF dofEffect;
     public GuidReference fireCracker;
 
@@ -21,7 +21,7 @@ public class KBDController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Y))
         {
-            vignetteEffect.StartEffect();
+            blurnetteEffect.StartEffect();
         } else if(Input.GetKeyUp(KeyCode.X))
         {
             dofEffect.StartEffect();
@@ -30,7 +30,9 @@ public class KBDController : MonoBehaviour
             colorLossEffect.StartEffect();
         } else if (Input.GetKeyUp(KeyCode.P))
         {
-            if(fireCracker != null) fireCracker.gameObject.GetComponent<FireCracker>().StartEffect();
+            if (fireCracker == null || fireCracker.gameObject == null || !fireCracker.gameObject.activeInHierarchy)
+                return;
+            fireCracker.gameObject.GetComponent<FireCracker>().StartEffect();
         }
     }
 }
