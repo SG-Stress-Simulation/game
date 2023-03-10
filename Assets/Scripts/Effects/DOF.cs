@@ -32,26 +32,5 @@ namespace Zinnia.Action.Effects
             dof.aperture.Override(32f);
             m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, dof);
         }
-        
-        public override void Update()
-        {
-            if (effectRunning)
-            {
-                float animationDuration = Math.Min(duration / 2, 1.5f);
-                float intens = intensity;
-
-                if ((duration - timeToEffectEnd) < animationDuration) { 
-                    intens = -((float) Math.Cos(Math.PI * (timeToEffectEnd - duration) / animationDuration) - 1) / 2;
-                }
-                if (timeToEffectEnd < animationDuration) { 
-                    intens = -((float) Math.Cos(Math.PI * timeToEffectEnd / animationDuration) - 1) / 2;
-                }
-
-                // map intens to apaerture (32 - 5) and focal distance (10 - 0.4)
-                dof.aperture.Override(32f - (27f * intens));
-                dof.focusDistance.Override(10f - (9.6f * intens));
-            }
-            base.Update();
-        }
     }
 }
