@@ -102,6 +102,8 @@ public class FireCracker : BaseEffect
         
         cg.contrast.Override(brightness);
         cg.brightness.Override(brightness);
+        cg.lift.Override(new Vector4(1f,1f,1f, (brightness / 50)));
+        
         
         base.Update();
     }

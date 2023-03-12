@@ -35,12 +35,14 @@ namespace Zinnia.Action.Effects
         {
             if (effectRunning)
             {
+                Debug.Log("Flashbang Running");
                 contrastStart -= Time.deltaTime * 30f;
 
                 if (contrastStart > 0.0f)
                 {
                     m_CG.contrast.Override(contrastStart);
                     m_CG.brightness.Override(contrastStart);
+                    m_CG.lift.Override(new Vector4(1f,1f,1f, (contrastStart / 100)));
                 }
                 else
                 {
