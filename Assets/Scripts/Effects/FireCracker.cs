@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 using Zinnia.Action.Effects;
+using System.Collections.Generic;
 
 
 public class FireCracker : BaseEffect
@@ -13,15 +12,14 @@ public class FireCracker : BaseEffect
     public AudioClip explosion;
     public AudioClip tinnitus;
 
-    public CanvasGroup AlphaController;
+    [Header("Firecracker Prefab")]
+    public GameObject fireCrackerPrefab;
 
     private ColorGrading cg;
+    private List<GameObject> activeFireCrackers;
+    private AudioSource tinnitusAudioSrc;
+    private AudioSource fuseAudioSrc;
 
-    private Vector3 startPos;
-    private Quaternion startRot;
-    private AudioSource[] myAudioSources;
-    private bool on = false;
-    
     public override void StopEffect()
     {
         base.StopEffect();
@@ -30,61 +28,70 @@ public class FireCracker : BaseEffect
     public override void StartEffect(bool oneShot = true, float effectDuration = EffectDefaults.EFFECT_DURATION, float effectIntensity = EffectDefaults.EFFECT_INTENSITY)
     {
         base.StartEffect(oneShot, effectDuration, effectIntensity);
-        myAudioSources[0].clip = fuse;
-        myAudioSources[0].Play();
-        GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 100));    
+        fuseAudioSrc.Play();
+        GameObject fireCracker = Instantiate(fireCrackerPrefab, transform.position, Quaternion.identity);
+        fireCracker.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 100));
+        activeFireCrackers.Add(fireCracker);
     }
 
     public override void Start()
     {
         base.Start();
-        startPos = transform.position;
-        startRot = transform.rotation;
-        myAudioSources = GetComponents<AudioSource>();
+
+        // create audio sources
+        tinnitusAudioSrc = gameObject.AddComponent<AudioSource>();
+        tinnitusAudioSrc.spatialBlend = 0f;
+        tinnitusAudioSrc.clip = tinnitus;
+        fuseAudioSrc = gameObject.AddComponent<AudioSource>();
+        fuseAudioSrc.spatialBlend = 1f;
+        fuseAudioSrc.clip = fuse;
+
+        // create flashbang effect
         cg = ScriptableObject.CreateInstance<ColorGrading>();
         cg.enabled.Override(true);
         m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, cg);
+
+        // create list of active firecrackers
+        activeFireCrackers = new List<GameObject>();
     }
         
     public override void Update()
     {
-        if(on)
+        if (cg.brightness.value > 0f)
+        { 
+            cg.brightness.Override(Math.Max(cg.brightness.value - Time.deltaTime * 10f, 0f));
+        }
+        if (tinnitusAudioSrc.volume > 0f)
         {
-            AlphaController.alpha = AlphaController.alpha - Time.deltaTime * 1f;
-            while (cg.brightness.value > 0f)
-            {
-                cg.brightness.Override(cg.brightness.value - Time.deltaTime * 10f);
-            }
-            if(cg.brightness.value <= 0f) cg.brightness.Override(0f);
-            myAudioSources[1].volume = myAudioSources[1].volume - Time.deltaTime * 0.2f;
+            tinnitusAudioSrc.volume = Math.Max(tinnitusAudioSrc.volume - Time.deltaTime * 0.2f, 0f);
+        }
 
-            if (myAudioSources[1].volume <= 0 ) 
+        // iterate over active firecrackers
+        for (int i = activeFireCrackers.Count - 1; i > -1; i--)
+        {
+            GameObject explosive = activeFireCrackers[i];
+            if (explosive.transform.position.y < 1.5f)
             {
-                AlphaController.alpha = 0;
-                myAudioSources[1].volume = 1;
-                myAudioSources[1].Stop();
-                on = false;
+                // stat effects
+                cg.brightness.Override(100f);
+                tinnitusAudioSrc.volume = 1f;
+                // hide explosive - disable mesh renderer
+                explosive.GetComponent<MeshRenderer>().enabled = false;
+                // play explosion sound
+                AudioSource audioSrc = explosive.AddComponent<AudioSource>();
+                audioSrc.spatialBlend = 1f;
+                audioSrc.clip = explosion;
+                audioSrc.Play();
+                // after explosion, remove the firecracker (2 seconds after explosion)
+                Destroy(explosive, 2f);
+                // remove firecracker from active list
+                activeFireCrackers.RemoveAt(i);
             }
         }
 
-        if(transform.position.y < 1.5f && effectRunning)
+        if (activeFireCrackers.Count == 0)
         {
-            myAudioSources[0].Stop();
-            myAudioSources[0].clip = explosion;
-            myAudioSources[1].clip = tinnitus;
-            myAudioSources[1].Play();
-            myAudioSources[0].Play();
-
-            AlphaController.alpha = 1;
-            cg.brightness.Override(100f);
-
-            on = true;
             effectRunning = false;
-
-            transform.position = startPos;
-            transform.rotation = startRot;
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
         base.Update();
     }
