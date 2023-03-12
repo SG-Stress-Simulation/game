@@ -8,7 +8,6 @@ namespace Zinnia.Action.Effects
         ColorGrading m_CG;
 
         private float contrastStart = 100f;
-        private float whiteStart = 1.0f;
 
         public override void StopEffect()
         {
