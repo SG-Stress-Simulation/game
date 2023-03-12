@@ -20,6 +20,8 @@ public class FireCracker : BaseEffect
     private AudioSource tinnitusAudioSrc;
     private AudioSource fuseAudioSrc;
 
+    private float brightness;
+
     public override void StopEffect()
     {
         base.StopEffect();
@@ -48,19 +50,23 @@ public class FireCracker : BaseEffect
 
         // create flashbang effect
         cg = ScriptableObject.CreateInstance<ColorGrading>();
+        cg.gradingMode.Override(GradingMode.LowDefinitionRange);
         cg.enabled.Override(true);
-        m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, cg);
+        m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 102f, cg);
 
+        brightness = 0f;
+        
         // create list of active firecrackers
         activeFireCrackers = new List<GameObject>();
     }
         
     public override void Update()
     {
-        if (cg.brightness.value > 0f)
-        { 
-            cg.brightness.Override(Math.Max(cg.brightness.value - Time.deltaTime * 10f, 0f));
-        }
+        if (brightness > 0f)
+            brightness -= Time.deltaTime * 30f;
+        else
+            brightness = 0f;
+        
         if (tinnitusAudioSrc.volume > 0f)
         {
             tinnitusAudioSrc.volume = Math.Max(tinnitusAudioSrc.volume - Time.deltaTime * 0.2f, 0f);
@@ -73,7 +79,7 @@ public class FireCracker : BaseEffect
             if (explosive.transform.position.y < 1.5f)
             {
                 // stat effects
-                cg.brightness.Override(100f);
+                brightness = 100f;
                 tinnitusAudioSrc.volume = 1f;
                 // hide explosive - disable mesh renderer
                 explosive.GetComponent<MeshRenderer>().enabled = false;
@@ -93,6 +99,10 @@ public class FireCracker : BaseEffect
         {
             effectRunning = false;
         }
+        
+        cg.contrast.Override(brightness);
+        cg.brightness.Override(brightness);
+        
         base.Update();
     }
 }
