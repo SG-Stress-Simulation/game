@@ -11,38 +11,11 @@ SGSS is a [serious game] that aims to help police officers to better understand 
 
 ## Getting Started
 
-* Git clone the repository with `git clone git@github.com:SG-Stress-Simulation/game.git`
+| :warning:     | Steam VR is required.   |
+|---------------|:------------------------|
 
-### Using the Unity Hub
-
-* Open the [Unity Hub] panel.
-* Click the `Add` Button:
-
-![image](https://user-images.githubusercontent.com/1029673/68544837-112cb180-03bf-11ea-8118-acd2640cfe30.png)
-
-* Browse to the local directory where the repository was downloaded to and click `Select Folder`:
-
-![image](https://user-images.githubusercontent.com/1029673/68544843-1a1d8300-03bf-11ea-9b88-60f55eddf617.png)
-
-* The SGSS project will now show up in the Unity Hub project window, so select it to open the SGSS project in the Unity software:
-
-![image](https://user-images.githubusercontent.com/1029673/68544856-243f8180-03bf-11ea-8890-1be86159e7f6.png)
-
-* The SGSS project will now open within the Unity software.
-
-### Opening from within the Unity software
-
-* Select `Main Menu -> File -> Open Project` within the Unity software.
-* Browse to the local directory where the repository was downloaded to and click `Select Folder`.
-* The SGSS project will now open within the Unity software.
-
-### Running the main scene
-
-* Open the `Assets/MainScene` scene.
-* Optionally enable `Maximize On Play` in the Unity Game view control bar to ensure no performance issues are caused by the Unity Editor overhead.
-* Play the scene in the Unity Editor (`CTRL` + `P`).
-* The scene should automatically play within any Unity supported XR hardware.
-* Explore the farm yard and enjoy!
+Go to the [releases page][releases] and download the latest release.
+To run the game, you simply need to execute the `P01 - High Stress Simulation.exe` file as with any other Unity game.
 
 ## License
 
@@ -55,6 +28,5 @@ These materials are not sponsored by or affiliated with Unity Technologies or it
 [VRTK]: https://www.vrtk.io/
 [serious game]: https://en.wikipedia.org/wiki/Serious_game
 [Unity]: https://unity3d.com/
-[Unity Hub]: https://docs.unity3d.com/hub/manual/index.html
-
+[releases]: releases
 [License]: LICENSE.md
